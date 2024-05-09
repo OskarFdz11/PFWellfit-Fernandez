@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --color-primary: #333831;
+    --color-primary01: #B0D3A5;
+    --color-secondary: #ECE5D1;
+    --color-secondary01: #F4F4F5;
+    --color-secondary02: #E4F0CD;
+    --color-secondary03: #4B4C9B;
+}
+
+@font-face {
+    font-family: 'Stara';
+    src: url(/fonts/Stara-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stara';
+    src: url(/fonts/Stara-Black.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+body {
+    background-color: var(--color-primary);
+    font-family: 'Stara', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.header_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-icons {
+    list-style-type: none;
+    margin: 50px;
+    padding: 0;
+
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: auto;
+}
+
+
+.logo {
+    margin-left: 50ps;
+    text-align: center;
+}
+
+.logo a img{
+    display: inline;
+    width: 800px;
+    height: auto;
+    text-align: center;
+
+
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+}
+
+.login a img {
+    width: 40px;
+    height: auto;
+}
+
+.login_signup {
+    display: flex;
+    margin-right: 60px;
+
+}
+
+.login_signup li {
+    list-style: none;
+    padding-right: 10px;
+    color: var(--color-secondary)
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 50px;
+    align-items: left;
+}
+
+.navbar ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 75px;
+    align-items: left;
+
+}
+
+.navbar_item {
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+
+}
+
+.navbar_item:hover {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    padding: 0px 10px;
+    border-radius: 30px;
+}
+
+.banner {
+    background-image: url(../img/principal.jpg);
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 1000px;
+    opacity: 0.9;
+    display: flex;
+    position: relative;
+}
+
+.content {
+    margin: 460px 0 0 175px;
+
+}
+
+.short_description {
+    color: var(--color-secondary);
+    display: block;
+    font-size: 2rem;
+}
+
+.unirme {
+    padding: 10px 25px;
+    background-color: rgba(10, 10, 10, 0.815);
+    color: var(--color-primary01);
+    border-radius: 50px;
+    border: 3px solid var(--color-primary01);
+    font-size: 32px;
+    font-weight: bold;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+.unirme:hover {
+    background-color: rgba(73, 72, 72, 0.281); 
+}
+
+
+
+footer {
+    background-color: var(--color-primary01);
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+footer > span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
+  }
+
+.container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    margin: 10%;
+    flex-direction: column;
+    border: 3px solid var(--color-secondary);
+    border-radius: 25px;
+
+  }
+
+.title {
+    color: var(--color-secondary);
+    margin: 30px;
+    border-bottom: 3px solid  var(--color-secondary);
+  }
+
+.title h1 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
+
+.contenido {
+    display: flex;
+    
+ } 
+
+.text {
+    display: block;
+    color: var(--color-secondary);
+    align-items: center;
+    margin: 100px 30px;
+    text-align: justify;
+    font-size: 1.5rem;
+ }
+
+.text h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+ }
+
+
+
+.contenido img {
+    width: 500px;
+    height: auto;
+    border-radius: 25px;
+    margin: 30px;
+}
