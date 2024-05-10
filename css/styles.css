@@ -53,36 +53,36 @@ li {
 
 }
 
-.header_top {
+.header__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.social-icons {
+.header__social-icons {
     list-style-type: none;
     margin: 50px;
     padding: 0;
 
 }
 
-.social-icons li {
+.header__social-icons li {
     display: inline-block;
     margin-right: 25px;
 }
 
-.social-icons a img {
+.header__social-icons a img {
     width: 24px;
     height: auto;
 }
 
 
-.logo {
+.header__logo {
     margin-left: 50ps;
     text-align: center;
 }
 
-.logo a img{
+.header__logo a img{
     display: inline;
     width: 800px;
     height: auto;
@@ -91,30 +91,30 @@ li {
 
 }
 
-.login {
+.header__login {
     display: flex;
     flex-direction: column;
     margin-left: 300px;
 }
 
-.login a img {
+.header__login a img {
     width: 40px;
     height: auto;
 }
 
-.login_signup {
+.header__login-signup {
     display: flex;
     margin-right: 60px;
 
 }
 
-.login_signup li {
+.header__login-signup li {
     list-style: none;
     padding-right: 10px;
     color: var(--color-secondary)
 }
 
-.navbar {
+.header__navbar {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -122,7 +122,7 @@ li {
     align-items: left;
 }
 
-.navbar ul {
+.header__navbar ul {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -131,20 +131,20 @@ li {
 
 }
 
-.navbar_item {
+.header__navbar-item {
     color: var(--color-secondary);
     font-size: 1.5rem;
 
 }
 
-.navbar_item:hover {
+.header__navbar-item:hover {
     color: var(--color-primary);
     background-color: var(--color-secondary);
     padding: 0px 10px;
     border-radius: 30px;
 }
 
-.banner {
+.main__banner {
     background-image: url(../img/principal.jpg);
     background-size: cover;
     background-position: top;
@@ -155,18 +155,18 @@ li {
     position: relative;
 }
 
-.content {
+.main__content {
     margin: 460px 0 0 175px;
 
 }
 
-.short_description {
+.main__content-short-description {
     color: var(--color-secondary);
     display: block;
     font-size: 2rem;
 }
 
-.unirme {
+.main__content-unirme-button {
     padding: 10px 25px;
     background-color: rgba(10, 10, 10, 0.815);
     color: var(--color-primary01);
@@ -178,11 +178,63 @@ li {
     transition: background-color 0.3s;
 }
 
-.unirme:hover {
+.main__content-unirme-button:hover {
     background-color: rgba(73, 72, 72, 0.281); 
 }
 
 
+
+
+.main__info-container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    margin: 10%;
+    flex-direction: column;
+    border: 3px solid var(--color-secondary);
+    border-radius: 25px;
+
+  }
+
+.main__info-container-title {
+    color: var(--color-secondary);
+    margin: 30px;
+    border-bottom: 3px solid  var(--color-secondary);
+  }
+
+.main__info-container-title h1 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
+
+.main__info-container-contenido {
+    display: flex;
+    
+ } 
+
+.main__info-container-contenido-text {
+    display: block;
+    color: var(--color-secondary);
+    align-items: center;
+    margin: 100px 30px;
+    text-align: justify;
+    font-size: 1.5rem;
+ }
+
+.main__info-container-contenido-text  h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+ }
+
+
+
+.main__info-container-contenido img {
+    width: 500px;
+    height: auto;
+    border-radius: 25px;
+    margin: 30px;
+}
 
 footer {
     background-color: var(--color-primary01);
@@ -197,55 +249,4 @@ footer > span {
     justify-content: flex-end;
     font-size: 0.9em;
     color: #444;
-  }
-
-.container {
-    width: 80%;
-    height: auto;
-    display: flex;
-    margin: 10%;
-    flex-direction: column;
-    border: 3px solid var(--color-secondary);
-    border-radius: 25px;
-
-  }
-
-.title {
-    color: var(--color-secondary);
-    margin: 30px;
-    border-bottom: 3px solid  var(--color-secondary);
-  }
-
-.title h1 {
-    text-transform: uppercase;
-    font-size: 2.5rem;
-  }
-
-.contenido {
-    display: flex;
-    
- } 
-
-.text {
-    display: block;
-    color: var(--color-secondary);
-    align-items: center;
-    margin: 100px 30px;
-    text-align: justify;
-    font-size: 1.5rem;
- }
-
-.text h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
-    font-weight: bold;
- }
-
-
-
-.contenido img {
-    width: 500px;
-    height: auto;
-    border-radius: 25px;
-    margin: 30px;
 }
