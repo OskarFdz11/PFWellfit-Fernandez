@@ -88,10 +88,9 @@ li {
     height: auto;
     text-align: center;
 
-
 }
 
-.header__login {
+.header__loging-01 {
     display: flex;
     flex-direction: column;
     margin-left: 300px;
