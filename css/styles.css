@@ -90,7 +90,7 @@ li {
 
 }
 
-.header__loging-01 {
+.header__loging {
     display: flex;
     flex-direction: column;
     margin-left: 300px;
