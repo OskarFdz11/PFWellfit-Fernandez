@@ -235,17 +235,3 @@ li {
     margin: 30px;
 }
 
-footer {
-    background-color: var(--color-primary01);
-    margin-top: 30px;
-    padding: 20px;
-    text-align: center;
-}
-
-footer > span {
-    margin-top: 5px;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 0.9em;
-    color: #444;
-}
