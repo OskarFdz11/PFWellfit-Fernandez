@@ -59,30 +59,30 @@ li {
     justify-content: space-between;
 }
 
-.header__social-icons {
+.social-icons {
     list-style-type: none;
     margin: 50px;
     padding: 0;
 
 }
 
-.header__social-icons li {
+.social-icons li {
     display: inline-block;
     margin-right: 25px;
 }
 
-.header__social-icons a img {
+.social-icons a img {
     width: 24px;
     height: auto;
 }
 
 
 .header__logo {
-    margin-left: 50ps;
+    margin-left: 50px;
     text-align: center;
 }
 
-.header__logo a img{
+.header__logo > img {
     display: inline;
     width: 800px;
     height: auto;
@@ -96,7 +96,7 @@ li {
     margin-left: 300px;
 }
 
-.header__login a img {
+.header__login img {
     width: 40px;
     height: auto;
 }
@@ -118,15 +118,15 @@ li {
     width: 100%;
     justify-content: space-between;
     padding: 0px 50px;
-    align-items: left;
+    align-items: start;
 }
 
-.header__navbar ul {
+.header__navbar-list {
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 10px 75px;
-    align-items: left;
+    align-items: start;
 
 }
 
