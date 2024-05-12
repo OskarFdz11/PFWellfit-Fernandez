@@ -66,12 +66,12 @@ li {
 
 }
 
-.social-icons li {
+.social-icon {
     display: inline-block;
     margin-right: 25px;
 }
 
-.social-icons a img {
+.social-icons img {
     width: 24px;
     height: auto;
 }
@@ -233,3 +233,18 @@ li {
     margin: 30px;
 }
 
+
+footer {
+    background-color: var(--color-primary01);
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer__copyright {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+    color: #444;
+}
