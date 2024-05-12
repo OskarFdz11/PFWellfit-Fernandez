@@ -71,7 +71,7 @@ li {
     margin-right: 25px;
 }
 
-.social-icons a img {
+.social-icons img {
     width: 24px;
     height: auto;
 }
@@ -82,7 +82,7 @@ li {
     text-align: center;
 }
 
-.logo a img{
+.logo img{
     display: inline;
     width: 800px;
     height: auto;
@@ -97,7 +97,7 @@ li {
     margin-left: 300px;
 }
 
-.login a img {
+.login img {
     width: 40px;
     height: auto;
 }
