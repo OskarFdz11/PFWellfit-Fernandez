@@ -4,6 +4,8 @@
 
 }
 
+/*variables de los colores utilizados*/
+
 :root {
     --color-primary: #333831;
     --color-primary01: #B0D3A5;
@@ -12,6 +14,8 @@
     --color-secondary02: #E4F0CD;
     --color-secondary03: #4B4C9B;
 }
+
+/*fuentes utilizadas*/
 
 @font-face {
     font-family: 'Stara';
@@ -27,6 +31,8 @@
     font-style: bold;
 }
 
+/*estilos generales*/
+
 body {
     background-color: var(--color-primary);
     font-family: 'Stara', sans-serif;
@@ -41,9 +47,12 @@ li {
     list-style: none;
 }
 
+/*estilos y maquetaciones del header*/
+
 .header {
     background-color: var(--color-primary);
-    display: flex;
+    display: grid;
+
     align-items: center;
     margin-top: 50px;
     width: 100%;
@@ -53,29 +62,14 @@ li {
 
 }
 
+/*parte superior del header*/
 .header__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.social-icons {
-    list-style-type: none;
-    margin: 50px;
-    padding: 0;
-
-}
-
-.social-icon {
-    display: inline-block;
-    margin-right: 25px;
-}
-
-.social-icon img {
-    width: 24px;
-    height: auto;
-}
-
+/*elementos y sub elementos del header*/
 
 .header__logo {
     margin-left: 50px;
@@ -113,6 +107,25 @@ li {
     color: var(--color-secondary)
 }
 
+.social-icons {
+    list-style-type: none;
+    margin: 50px;
+    padding: 0;
+
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: auto;
+}
+
+/*estilos de la navbar dentro del header*/
+
 .header__navbar {
     display: flex;
     width: 100%;
@@ -143,6 +156,7 @@ li {
     border-radius: 30px;
 }
 
+/*estilos del contenido principal*/
 .main__banner {
     background-image: url(../img/principal.jpg);
     background-size: cover;
@@ -233,6 +247,7 @@ li {
     margin: 30px;
 }
 
+/*estilos del footer*/
 
 footer {
     background-color: var(--color-primary01);
