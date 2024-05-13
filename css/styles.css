@@ -36,6 +36,8 @@
 body {
     background-color: var(--color-primary);
     font-family: 'Stara', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -47,12 +49,20 @@ li {
     list-style: none;
 }
 
+/*GRID que controla todo el contenido y diseño responsive en todos los elementos*/
+
+.all-contain {
+    width: 100%;
+
+}
+
+
+
 /*estilos y maquetaciones del header*/
 
 .header {
     background-color: var(--color-primary);
-    display: grid;
-
+    display: flex;
     align-items: center;
     margin-top: 50px;
     width: 100%;
