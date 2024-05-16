@@ -50,17 +50,9 @@ li {
     list-style: none;
 }
 
-/*GRID que controla todo el contenido y diseño responsive en todos los elementos*/
-
-.all-contain {
-    margin: 0;
-    width: 100%;
-    display: grid;
-
-
+ul {
+    padding-left: 0;
 }
-
-
 
 /*estilos y maquetaciones del header*/
 
@@ -68,12 +60,9 @@ li {
     background-color: var(--color-primary);
     display: flex;
     align-items: center;
-    margin-top: 50px;
-    width: 100%;
     height: auto;
-    justify-content: space-between;
+    text-align: center;
     flex-direction: column;
-
 }
 
 /*parte superior del header*/
@@ -83,18 +72,13 @@ li {
     justify-content: space-between;
     flex-direction: column;
 }
-
 /*elementos y sub elementos del header*/
 
-.header__logo {
-    margin: 25px;
-    text-align: center;
-}
 
 .header__logo img {
-    display: inline;
-    width: 800px;
+    width: 100%;
     height: auto;
+    padding: 25px;
     text-align: center;
 
 }
@@ -102,36 +86,39 @@ li {
 .header__loging {
     display: flex;
     flex-direction: column;
-    margin-left: 0;
     text-align: center;
+    justify-self: center;
 }
+
 
 .header__login img {
     width: 40px;
     height: auto;
+
     
 }
 
 .header__login-signup {
     display: flex;
+    text-align: center;
 
 }
 
 .header__login-signup li {
     list-style: none;
-    padding-right: 10px;
-    color: var(--color-secondary)
+    padding: 5px;
+    color: var(--color-secondary);
 }
 
 .social-icons {
     list-style-type: none;
     margin: 25px;
-    padding: 0
+    padding: 0;
 }
 
 .social-icon {
     display: inline-block;
-    margin-right: 25px;
+    padding: 10px;
 }
 
 .social-icon img {
@@ -144,24 +131,21 @@ li {
 .header__navbar {
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    padding: 0px 50px;
-    align-items: start;
+    text-align: center;
+    justify-content: center;
 }
 
 .header__navbar-list {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    justify-content: space-between;
-    padding: 10px 75px;
-    align-items: start;
+    text-align: center;
 
 }
 
 .header__navbar-item {
     color: var(--color-secondary);
     font-size: 1.5rem;
-
 }
 
 .header__navbar-item:hover {
@@ -193,9 +177,14 @@ li {
 }
 
 .main__content {
+   width: 100%;
+   height: auto;
+   padding: 15px;
+}
 
-    padding: 15px;
+.main__content img {
 
+    width: 100%;
 }
 
 .main__content-short-description {
@@ -274,13 +263,64 @@ li {
     margin: 30px;
 }
 
+/*estilos de las categorías en el main con grid y bootstrap*/
+
+.main__categories-elements {
+
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-gap: 30px;
+    text-align: center;
+    padding: 50px;
+
+}
+
+.main__categories h4 {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 2rem;
+    color: var(--color-secondary);
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+
+}
+
+.btn {
+    background-color: var(--color-primary01);
+}
+
+
+
 /*estilos del footer*/
 
 footer {
+    
     background-color: var(--color-primary01);
     margin-top: 30px;
-    padding: 20px;
+    padding: 20px 50px;
     text-align: center;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .footer__copyright {
