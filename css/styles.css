@@ -5,6 +5,8 @@
 
 }
 
+/*variables de los colores utilizados*/
+
 :root {
     --color-primary: #333831;
     --color-primary01: #B0D3A5;
@@ -13,6 +15,8 @@
     --color-secondary02: #E4F0CD;
     --color-secondary03: #4B4C9B;
 }
+
+/*fuentes utilizadas*/
 
 @font-face {
     font-family: 'Stara';
@@ -28,9 +32,13 @@
     font-style: bold;
 }
 
+/*estilos generales*/
+
 body {
     background-color: var(--color-primary);
     font-family: 'Stara', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -42,47 +50,96 @@ li {
     list-style: none;
 }
 
+ul {
+    padding-left: 0;
+}
+
+/*estilos y maquetaciones del header*/
+
 .header {
     background-color: var(--color-primary);
     display: flex;
     align-items: center;
-    margin-top: 50px;
-    width: 100%;
     height: auto;
-    justify-content: space-between;
+    text-align: center;
     flex-direction: column;
-
 }
 
-.header_top {
+/*parte superior del header*/
+.header__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
+}
+/*elementos y sub elementos del header*/
+
+
+.header__logo img {
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    text-align: center;
+
+}
+
+.header__loging {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-self: center;
+}
+
+
+.header__login img {
+    width: 40px;
+    height: auto;
+
+    
+}
+
+.header__login-signup {
+    display: flex;
+    text-align: center;
+
+}
+
+.header__login-signup li {
+    list-style: none;
+    padding: 5px;
+    color: var(--color-secondary);
 }
 
 .social-icons {
     list-style-type: none;
-    margin: 50px;
+    margin: 25px;
     padding: 0;
-
 }
 
-.social-icons li {
+.social-icon {
     display: inline-block;
-    margin-right: 25px;
+    padding: 10px;
 }
 
+<<<<<<< HEAD
 .social-icons img {
+=======
+.social-icon img {
+>>>>>>> responsive
     width: 24px;
     height: auto;
 }
 
+/*estilos de la navbar dentro del header*/
 
-.logo {
-    margin-left: 50ps;
+.header__navbar {
+    display: flex;
+    width: 100%;
     text-align: center;
+    justify-content: center;
 }
 
+<<<<<<< HEAD
 .logo img{
     display: inline;
     width: 800px;
@@ -129,45 +186,81 @@ li {
     justify-content: space-between;
     padding: 10px 75px;
     align-items: left;
+=======
+.header__navbar-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+>>>>>>> responsive
 
 }
 
-.navbar_item {
+.header__navbar-item {
     color: var(--color-secondary);
     font-size: 1.5rem;
+}
+
+/*cambiamos el color del icono del menú hamburquesa para que sea mantenga el formato*/
+
+.navbar-toggler {
+    border-color: var(--color-secondary);
+}
+
+
+.navbar-toggler-icon {
+
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28236, 229, 209, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); 
 
 }
 
-.navbar_item:hover {
+.header__navbar-item:hover {
     color: var(--color-primary);
     background-color: var(--color-secondary);
     padding: 0px 10px;
     border-radius: 30px;
 }
 
-.banner {
-    background-image: url(../img/principal.jpg);
-    background-size: cover;
-    background-position: top;
-    width: 100%;
-    height: 1000px;
-    opacity: 0.9;
+/*estilos del contenido principal*/
+.main__banner {
     display: flex;
-    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    
+    ,url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
 }
 
-.content {
-    margin: 460px 0 0 175px;
-
+.main__content {
+   width: 100%;
+   height: auto;
+   padding: 15px;
 }
 
-.short_description {
+.main__content img {
+
+    width: 100%;
+}
+
+.main__content-short-description {
     color: var(--color-secondary);
     display: block;
     font-size: 2rem;
+    padding: 10px;
 }
 
-.unirme {
+.main__content-unirme-button {
     padding: 10px 25px;
     background-color: rgba(10, 10, 10, 0.815);
     color: var(--color-primary01);
@@ -177,13 +270,15 @@ li {
     font-weight: bold;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s;
+    margin: 10px;
 }
 
-.unirme:hover {
+.main__content-unirme-button:hover {
     background-color: rgba(73, 72, 72, 0.281); 
 }
 
 
+<<<<<<< HEAD
 
 footer {
     background-color: var(--color-primary01);
@@ -201,6 +296,9 @@ footer > span {
 }
 
 .container {
+=======
+.main__info-container {
+>>>>>>> responsive
     width: 80%;
     height: auto;
     display: flex;
@@ -208,35 +306,40 @@ footer > span {
     flex-direction: column;
     border: 3px solid var(--color-secondary);
     border-radius: 25px;
+    text-align: center;
 
-  }
+}
 
-.title {
+.main__info-container-title {
     color: var(--color-secondary);
     margin: 30px;
     border-bottom: 3px solid  var(--color-secondary);
   }
 
-.title h1 {
+.main__info-container-title h1 {
     text-transform: uppercase;
     font-size: 2.5rem;
   }
 
-.contenido {
+.main__info-container-contenido {
     display: flex;
-    
- } 
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
 
-.text {
+} 
+
+.main__info-container-contenido-text {
     display: block;
     color: var(--color-secondary);
     align-items: center;
-    margin: 100px 30px;
-    text-align: justify;
+    margin: 30px;
     font-size: 1.5rem;
+    text-align: justify;
  }
 
-.text h2 {
+.main__info-container-contenido-text  h2 {
     margin-bottom: 30px;
     font-size: 2rem;
     font-weight: bold;
@@ -244,9 +347,175 @@ footer > span {
 
 
 
-.contenido img {
-    width: 500px;
+.main__info-container-contenido img {
+    width: 100%;
     height: auto;
-    border-radius: 25px;
-    margin: 30px;
+    border-radius: 30px;
+}
+
+/*estilos de las categorías en el main con grid y bootstrap*/
+
+.main__categories-elements {
+
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-gap: 30px;
+    text-align: center;
+    padding: 50px;
+
+}
+
+.main__categories h4 {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 2rem;
+    color: var(--color-secondary);
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+
+}
+
+.btn {
+    background-color: var(--color-primary01);
+}
+
+
+
+/*estilos del footer*/
+
+footer {
+    
+    background-color: var(--color-primary01);
+    margin-top: 30px;
+    padding: 20px 50px;
+    text-align: center;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer__copyright {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+    color: #444;
+}
+
+
+/*Ajustar elementos a desktop*/
+
+@media (min-width: 1023px) {
+
+    /*cambiar la dirección del header, así como el espacio entre los elementos*/
+    .header__top {
+        flex-direction: row;
+        padding-top: 50px;
+        justify-content: space-around;
+        gap: 45px;
+
+    }
+
+    /*ajustamos el tamaño del logo para que cubra un 50% de la pantalla*/
+
+    .header__logo {
+        width: 50vw;
+        height: auto;
+        padding: 0;
+    }
+
+    .header__logo img {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    
+    
+    }
+ 
+    /*cambiamos el orden de los elementos para que los iconos de redes sociales aparezcan primero de izquierda a derecha*/
+    .social-icons {
+        order: -1;
+        margin: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .social-icon img {
+        width: 25px;
+        height: auto;
+    }
+
+    .header__login img {
+        width: 10px;
+        height: auto;
+    
+    }
+
+   /*modificamos la clase de la navbar de bootstrap para que se adapte al tamaño de la pantalla*/
+
+   .header__navbar-list {
+    flex-direction: row;
+    width: 100%;
+    gap: 100px;
+    justify-content: space-between
+
+    }
+
+    /*ocultamos el título del menú desplegable para que solo aparezca en la vista movil*/
+
+    .navbar-brand {
+        display: none;
+    }
+
+    /*modificamos el tamaño del logo en el banner y lo alineamos en la parte de abajo*/
+
+    .main__content {
+        width: 30%;
+    }
+
+    .main__banner {
+        justify-content: flex-end;
+    }
+
+    /*Ajustamos el GRID a 3 columnas para que acomode mejor las categorías*/
+
+    .main__categories-elements {
+
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    /*cambiamos la dirección flex de la tarjeta de informacion en las categorias para que se adapte a desktop*/
+
+    .main__info-container-contenido {
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        padding: 30px;
+    
+    } 
+
+    .main__info-container-contenido img {
+        width: 500px;
+        height: auto;
+    }
+    
 }
