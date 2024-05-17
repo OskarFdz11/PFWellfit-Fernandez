@@ -121,11 +121,7 @@ ul {
     padding: 10px;
 }
 
-<<<<<<< HEAD
 .social-icons img {
-=======
-.social-icon img {
->>>>>>> responsive
     width: 24px;
     height: auto;
 }
@@ -139,7 +135,6 @@ ul {
     justify-content: center;
 }
 
-<<<<<<< HEAD
 .logo img{
     display: inline;
     width: 800px;
@@ -186,13 +181,6 @@ ul {
     justify-content: space-between;
     padding: 10px 75px;
     align-items: left;
-=======
-.header__navbar-list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
->>>>>>> responsive
 
 }
 
@@ -278,7 +266,6 @@ ul {
 }
 
 
-<<<<<<< HEAD
 
 footer {
     background-color: var(--color-primary01);
@@ -296,9 +283,6 @@ footer > span {
 }
 
 .container {
-=======
-.main__info-container {
->>>>>>> responsive
     width: 80%;
     height: auto;
     display: flex;
