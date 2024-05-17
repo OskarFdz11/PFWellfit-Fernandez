@@ -233,8 +233,9 @@ ul {
     flex-direction: column;
     border: 3px solid var(--color-secondary);
     border-radius: 25px;
+    text-align: center;
 
-  }
+}
 
 .main__info-container-title {
     color: var(--color-secondary);
@@ -249,16 +250,20 @@ ul {
 
 .main__info-container-contenido {
     display: flex;
-    
- } 
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+
+} 
 
 .main__info-container-contenido-text {
     display: block;
     color: var(--color-secondary);
     align-items: center;
-    margin: 100px 30px;
-    text-align: justify;
+    margin: 30px;
     font-size: 1.5rem;
+    text-align: justify;
  }
 
 .main__info-container-contenido-text  h2 {
@@ -270,10 +275,9 @@ ul {
 
 
 .main__info-container-contenido img {
-    width: 500px;
+    width: 100%;
     height: auto;
-    border-radius: 25px;
-    margin: 30px;
+    border-radius: 30px;
 }
 
 /*estilos de las categorías en el main con grid y bootstrap*/
@@ -409,10 +413,36 @@ footer {
         display: none;
     }
 
+    /*modificamos el tamaño del logo en el banner y lo alineamos en la parte de abajo*/
+
     .main__content {
         width: 30%;
-     }
+    }
 
+    .main__banner {
+        justify-content: flex-end;
+    }
 
+    /*Ajustamos el GRID a 3 columnas para que acomode mejor las categorías*/
 
+    .main__categories-elements {
+
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    /*cambiamos la dirección flex de la tarjeta de informacion en las categorias para que se adapte a desktop*/
+
+    .main__info-container-contenido {
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        padding: 30px;
+    
+    } 
+
+    .main__info-container-contenido img {
+        width: 500px;
+        height: auto;
+    }
+    
 }

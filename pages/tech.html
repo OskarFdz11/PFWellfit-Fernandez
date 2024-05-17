@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech</title>
+    <!--Bootstrap y CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
+
+    <!--Header-->
     <header class="header">
 
-        <div class="header__top">
+        <div class="header__top ">
+
+
+            <div class="header__logo">
+                <a href="../index.html">
+                    <img src="../img/logo_horizontal.png" alt="logo Wellfit">
+                </a>
+            </div>
+
+    <!--iconos de redes sociales-->    
 
             <ul class="social-icons">
                 <li class="social-icon">
@@ -22,7 +38,7 @@
                         <img src="../img/icons/x.png" alt="x twitter">
                     </a>
                 </li>
-                <li class="social-icon"> 
+                <li class="social-icon">
                     <a href="#">
                         <img src="../img/icons/instagram.png" alt="instagram">
                     </a>
@@ -44,11 +60,7 @@
                 </li>
             </ul>
 
-            <div class="header__logo">
-                <a href="../index.html">
-                    <img src="../img/logo_horizontal.png" alt="logo Wellfit">
-                </a>
-            </div>
+        <!--icono y links de login/signup-->    
 
             <div class="header__loging">
                 <a href="#">
@@ -67,29 +79,44 @@
             </div>
         </div>
 
-        <nav class="header__navbar">
+        <!--navbar de boostrap-->
 
-            <ul class="header__navbar-list">
-                <li class="header__navbar-item">
-                    <a href="../index.html">INICIO</a>
-                </li>
-                <li class="header__navbar-item">
-                    <a href="./lifestyle.html">LIFESTYLE</a>
-                </li>
-                <li class="header__navbar-item"> 
-                    <a href="./wellness.html">WELLLNESS</a>
-                </li>
-                <li class="header__navbar-item">
-                    <a href="./fitness.html">FITNESS</a>
-                </li>
-                <li class="header__navbar-item">
-                    <a href="#">TECH</a>
-                </li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand header__navbar-item" href="#">Menú</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav header__navbar-list">
+                    <li class="header__navbar-item">
+                        <a href="../index.html">INICIO</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="./lifestyle.html">LIFESTYLE</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="./wellness.html">WELLLNESS</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="./fitness.html">FITNESS</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="./tech.html">TECH</a>
+                    </li>
+                  
+                </div>
+              </div>
+            </div>
+          </nav>
+        
     </header>
 
+    <!--Contenido principal-->
+
     <main>
+
+        <!--tarjeta informativa de cada categoría-->
 
         <section class="info">
             <div class="main__info-container">
@@ -97,7 +124,7 @@
                     <h1>Tech</h1>
                 </div>
                 <div class="main__info-container-contenido">
-                    <img src="../img/fitness.jpg" alt="equilibrio">
+                    <img src="../img/tech.jpg" alt="equilibrio">
                     <div class="main__info-container-contenido-text">
                         <h2>Innovación Activa: Tecnología al Servicio del Fitness</h2>
                         <p>Descubre cómo la tecnología está revolucionando la manera en que nos mantenemos en forma. Desde aplicaciones inteligentes hasta dispositivos de seguimiento de actividad, exploramos las últimas innovaciones que hacen que alcanzar tus metas de fitness sea más eficiente y motivador.</p>
@@ -106,13 +133,14 @@
             </div>
         </section>
 
-
-
     </main>
 
+    <!--Footer-->
     <footer>
         <section class="contacto">
             <h3>SIGAMOS EN CONTACTO</h3>
+
+            <!--redes sociales del footer-->
             <ul class="social-icons">
                 <li class="social-icon">
                     <a href="#">
@@ -124,7 +152,7 @@
                         <img src="../img/icons/twitter_dark.png" alt="x twitter">
                     </a>
                 </li>
-                <li class="social-icon"> 
+                <li class="social-icon">
                     <a href="#">
                         <img src="../img/icons/instagram_dark.png" alt="instagram">
                     </a>
@@ -146,11 +174,19 @@
                 </li>
             </ul>
 
-            <span class="footer__copyright">2024 | The Wellfit Society © Todos los derechos reservados</span>
+            <!--span de copyright-->
 
+            <span class="footer__copyright">2024 | The Wellfit Society © Todos los derechos reservados</span>
         </section>
-        
+
     </footer>
-    
+
+    <!--link de bootstrap-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
