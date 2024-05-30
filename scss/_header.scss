@@ -53,7 +53,7 @@
 .social-icons {
     display: flex;
     flex-wrap: nowrap;
-    margin: 25px;
+    margin: auto;
     padding: 0;
 }
 
@@ -86,6 +86,7 @@
 .header__navbar-item {
     color: $color-secondary;
     font-size: 1.5rem;
+    transition: all 0.5s;
 }
 
 /*cambiamos el color del icono del menú hamburquesa para que sea mantenga el formato*/

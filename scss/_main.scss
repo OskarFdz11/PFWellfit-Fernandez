@@ -8,7 +8,7 @@
     flex-direction: column;
     width: 100%;
     height: 90vh;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/principal.jpg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/principal.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -122,9 +122,9 @@
     box-sizing: border-box;
 }
 
-.card-img-top {
+.card-img {
     width: 100%;
-    height: 0px;
+    height: 50vh;
     object-fit: cover;
 }
 
@@ -135,4 +135,71 @@
 
 .btn {
     background-color: $color-primary01;
+    transition: all 0.5s;
+
+    &:hover {
+        border: $color-secondary solid 2px;
+    }
+}
+
+/*estilos de las tabs de bootstrap*/
+
+.main__tabs {
+    text-align: center;
+}
+
+.main__tabs-elements {
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin: 50px;
+    border-radius: 10px;
+    border: 2px solid $color-secondary;
+}
+
+.nav-link {
+    color: $color-secondary;
+    transition: all 0.5s;
+
+    &:hover {
+        color: $color-secondary;
+        opacity: 0.8;
+    }
+}
+
+.main__tabs-elements .nav .active {
+    background-color: $color-secondary;
+}
+
+.tab-pane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    img {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+        margin: 25px 0;
+        border-radius: 5px;
+    }
+}
+
+.tab-content-text {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+
+    h3 {
+        color: $color-secondary;
+        text-align: center;
+    }
+
+    p {
+        color: $color-secondary;
+        margin: 10px;
+    }
+
+
 }

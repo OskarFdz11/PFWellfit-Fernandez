@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./img/favicon.ico">
 </head>
 
 <body>
@@ -143,7 +144,7 @@
             <div class="main__categories-elements">
 
                 <div class="card">
-                    <img src="./img/fitness.jpg" class="card-img" alt="caterogita fitness">
+                    <img src="./img/fitness.webp" class="card-img" alt="caterogita fitness">
                     <div class="card-body">
                         <h5 class="card-title">Fitness</h5>
                         <a href="#" class="btn">LEER AHORA</a>
@@ -151,7 +152,7 @@
                 </div>
 
                 <div class="card">
-                    <img src="./img/wellness.jpg" class="card-img-top" alt="categoria wellness">
+                    <img src="./img/wellness.webp" class="card-img" alt="categoria wellness">
                     <div class="card-body">
                         <h5 class="card-title">Wellnes</h5>
                         <a href="#" class="btn">LEER AHORA</a>
@@ -159,7 +160,7 @@
                 </div>
 
                 <div class="card m-0">
-                    <img src="./img/podcast.jpg" class="card-img-top" alt="categoria podcast">
+                    <img src="./img/podcast.webp" class="card-img" alt="categoria podcast">
                     <div class="card-body">
                         <h5 class="card-title">Podcast</h5>
                         <a href="#" class="btn">LEER AHORA</a>
@@ -169,11 +170,56 @@
 
         </section>
 
+        <!--tabs de información de bootstrap-->
+        <section class="main__tabs">
+            
+            <div class="main__tabs-elements">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-escogernos-tab" data-bs-toggle="tab" data-bs-target="#nav-escogernos" type="button" role="tab" aria-controls="nav-escogernos" aria-selected="true">¿Porqué escogernos?</button>
+                    <button class="nav-link" id="nav-mision-tab" data-bs-toggle="tab" data-bs-target="#nav-mision" type="button" role="tab" aria-controls="nav-mision" aria-selected="false">Misión</button>
+                    <button class="nav-link" id="nav-vision-tab" data-bs-toggle="tab" data-bs-target="#nav-vision" type="button" role="tab" aria-controls="nav-vision" aria-selected="false">Visión</button>
+                    <button class="nav-link" id="nav-somos-tab" data-bs-toggle="tab" data-bs-target="#nav-somos" type="button" role="tab" aria-controls="nav-somos" aria-selected="false">Quiénes Somos</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-container tab-pane fade show active" id="nav-escogernos" role="tabpanel" aria-labelledby="nav-escogernos-tab" tabindex="0">
+                        <img src="./img/escogernos.webp" alt="imagen de porqué escogernos">
+                        <div class="tab-content-text">
+                            <h3>¿Por Qué Escogernos?</h3>
+                            <p>Ofrecemos un enfoque holístico al bienestar, con entrenamientos personalizados, asesoría nutricional y apoyo emocional, respaldados por expertos, garantizando resultados sostenibles y una comunidad comprometida con tu salud.</p>
+                        </div>
+                    </div>
+                    <div class="tab-container tab-pane fade" id="nav-mision" role="tabpanel" aria-labelledby="nav-mision-tab" tabindex="0">
+                        <img src="./img/mision.webp" alt="imagen de nuestra mision">
+                        <div class="tab-content-text">
+                            <h3>Nuestra Misión</h3>
+                            <p>Inspirar y guiar a las personas hacia un bienestar integral mediante programas de fitness personalizados, educación nutricional y apoyo emocional, promoviendo hábitos saludables y sostenibles para una vida más plena.</p>
+                        </div>
+                    </div>
+                    <div class="tab-container tab-pane fade" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab" tabindex="0">
+                        <img src="./img/vision.webp" alt="imagen de nuestra vision">
+                        <div class="tab-content-text">
+                            <h3>Nuestra Visión</h3>
+                            <p>Ser la comunidad líder en salud y bienestar, reconocida por transformar vidas a través de un enfoque integral que combina ejercicio, nutrición y equilibrio emocional, fomentando una cultura de vida saludable.</p>
+                        </div>
+                    </div>
+                    <div class="tab-container tab-pane fade" id="nav-somos" role="tabpanel" aria-labelledby="nav-somos-tab" tabindex="0">
+                        <img src="./img/nosotros.webp" alt="imagen de quienes somos">
+                        <div class="tab-content-text">
+                            <h3>Sobre Nosotros</h3>
+                            <p>The Wellfit Society es una comunidad de fitness dedicada a promover un estilo de vida equilibrado y saludable, combinando ejercicio, nutrición y bienestar mental para alcanzar una vida plena y activa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!--Footer-->
     <footer>
-        <section class="contacto">
+        <section class="footer__contacto">
             <h3>SIGAMOS EN CONTACTO</h3>
 
             <!--redes sociales del footer-->

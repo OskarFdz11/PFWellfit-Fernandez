@@ -90,7 +90,7 @@ ul {
 .social-icons {
   display: flex;
   flex-wrap: nowrap;
-  margin: 25px;
+  margin: auto;
   padding: 0;
 }
 
@@ -121,6 +121,7 @@ ul {
 .header__navbar-item {
   color: #ECE5D1;
   font-size: 1.5rem;
+  transition: all 0.5s;
 }
 
 /*cambiamos el color del icono del menú hamburquesa para que sea mantenga el formato*/
@@ -148,7 +149,7 @@ ul {
   flex-direction: column;
   width: 100%;
   height: 90vh;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/principal.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/principal.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -257,9 +258,9 @@ ul {
   box-sizing: border-box;
 }
 
-.card-img-top {
+.card-img {
   width: 100%;
-  height: 0px;
+  height: 50vh;
   object-fit: cover;
 }
 
@@ -270,11 +271,70 @@ ul {
 
 .btn {
   background-color: #B0D3A5;
+  transition: all 0.5s;
+}
+.btn:hover {
+  border: #ECE5D1 solid 2px;
+}
+
+/*estilos de las tabs de bootstrap*/
+.main__tabs {
+  text-align: center;
+}
+
+.main__tabs-elements {
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin: 50px;
+  border-radius: 10px;
+  border: 2px solid #ECE5D1;
+}
+
+.nav-link {
+  color: #ECE5D1;
+  transition: all 0.5s;
+}
+.nav-link:hover {
+  color: #ECE5D1;
+  opacity: 0.8;
+}
+
+.main__tabs-elements .nav .active {
+  background-color: #ECE5D1;
+}
+
+.tab-pane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.tab-pane img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  margin: 25px 0;
+  border-radius: 5px;
+}
+
+.tab-content-text {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+.tab-content-text h3 {
+  color: #ECE5D1;
+  text-align: center;
+}
+.tab-content-text p {
+  color: #ECE5D1;
+  margin: 10px;
 }
 
 /*estilos del footer*/
 footer {
-  background-color: #333831;
+  background-color: #B0D3A5;
   margin-top: 30px;
   padding: 20px 50px;
   text-align: center;
@@ -284,6 +344,17 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.footer__contacto {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.footer__contacto h3 {
+  order: -1;
 }
 
 .footer__copyright {
@@ -361,6 +432,11 @@ footer {
   .main__info-container-contenido img {
     width: 500px;
     height: auto;
+  }
+  /*hacer responsive para desktop las tabs de bootstrap*/
+  .tab-container {
+    display: flex;
+    flex-direction: row;
   }
 }
 

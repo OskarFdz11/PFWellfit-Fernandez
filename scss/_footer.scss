@@ -1,7 +1,7 @@
 /*estilos del footer*/
 
 footer {
-    background-color: $color-primary;
+    background-color: $color-primary01;
     margin-top: 30px;
     padding: 20px 50px;
     text-align: center;
@@ -11,6 +11,18 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.footer__contacto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+    h3 {
+        order: -1;
+    }
 }
 
 .footer__copyright {

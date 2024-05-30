@@ -87,4 +87,11 @@
             height: auto;
         }
     }
+
+    /*hacer responsive para desktop las tabs de bootstrap*/
+
+    .tab-container {
+        display: flex;
+        flex-direction: row;
+    }
 }
