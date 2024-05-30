@@ -93,5 +93,32 @@
     .tab-container {
         display: flex;
         flex-direction: row;
+        align-items: flex-start;
+
+        img {
+            width: 700px;
+            height: 350px;
+            object-fit: cover;
+            margin: 15px;
+        }
+
     }
+
+    .tab-content-text {
+
+        margin: 10px;
+
+        h3 {
+            margin-top: 15px;
+            text-align: left;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+
 }

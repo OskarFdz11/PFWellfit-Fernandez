@@ -1,3 +1,12 @@
+/*reset de estilos generales*/
+
+@mixin links {
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    padding-left: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,14 +21,14 @@ body {
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+    @include links;
+
 }
 
 li {
-    list-style: none;
+    @include links;
 }
 
 ul {
-    padding-left: 0;
+    @include links;
 }
