@@ -1,0 +1,107 @@
+/*estilos y maquetaciones del header*/
+
+.header {
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+}
+
+/*parte superior del header*/
+
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/*elementos y sub elementos del header*/
+
+.header__logo img {
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    text-align: center;
+}
+
+.header__loging {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-self: center;
+}
+
+.header__login img {
+    width: 40px;
+    height: auto;
+}
+
+.header__login-signup {
+    display: flex;
+    text-align: center;
+
+    li {
+        list-style: none;
+        padding: 5px;
+        color: $color-secondary;
+    }
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+    padding: 0;
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 10px;
+
+    img {
+        width: 24px;
+        height: auto;
+    }
+}
+
+/*estilos de la navbar dentro del header*/
+
+.header__navbar {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.header__navbar-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.header__navbar-item {
+    color: $color-secondary;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+/*cambiamos el color del icono del menú hamburquesa para que sea mantenga el formato*/
+
+.navbar-toggler {
+    border-color: $color-secondary;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28236, 229, 209, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.header__navbar-item:hover {
+    color: var(--color-primary);
+    background-color: $color-secondary;
+    padding: 0px 10px;
+    border-radius: 30px;
+}

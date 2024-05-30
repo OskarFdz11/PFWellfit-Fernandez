@@ -1,0 +1,34 @@
+/*estilos del footer*/
+
+footer {
+    background-color: $color-primary01;
+    margin-top: 30px;
+    padding: 20px 50px;
+    text-align: center;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer__contacto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+    h3 {
+        order: -1;
+    }
+}
+
+.footer__copyright {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+    color: #444;
+}

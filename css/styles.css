@@ -1,288 +1,205 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
+@charset "UTF-8";
+/*Hoja de estilos principal de SCSS*/
 /*variables de los colores utilizados*/
-
-:root {
-    --color-primary: #333831;
-    --color-primary01: #B0D3A5;
-    --color-secondary: #ECE5D1;
-    --color-secondary01: #F4F4F5;
-    --color-secondary02: #E4F0CD;
-    --color-secondary03: #4B4C9B;
+/*reset de estilos generales*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-/*fuentes utilizadas*/
-
-@font-face {
-    font-family: 'Stara';
-    src: url(/fonts/Stara-Medium.ttf);
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Stara';
-    src: url(/fonts/Stara-Black.ttf);
-    font-weight: bold;
-    font-style: bold;
-}
-
-/*estilos generales*/
 
 body {
-    background-color: var(--color-primary);
-    font-family: 'Stara', sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: #333831;
+  font-family: "Stara", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+  padding-left: 0;
 }
 
 li {
-    list-style: none;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+  padding-left: 0;
 }
 
 ul {
-    padding-left: 0;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+  padding-left: 0;
 }
 
+/*fuentes utilizadas*/
+@font-face {
+  font-family: "Stara";
+  src: url(/fonts/Stara-Medium.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stara";
+  src: url(/fonts/Stara-Black.ttf);
+  font-weight: bold;
+  font-style: bold;
+}
 /*estilos y maquetaciones del header*/
-
 .header {
-    background-color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    height: auto;
-    text-align: center;
-    flex-direction: column;
+  background-color: #333831;
+  display: flex;
+  align-items: center;
+  height: auto;
+  text-align: center;
+  flex-direction: column;
 }
 
 /*parte superior del header*/
 .header__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
+
 /*elementos y sub elementos del header*/
-
-
 .header__logo img {
-    width: 100%;
-    height: auto;
-    padding: 25px;
-    text-align: center;
-
+  width: 100%;
+  height: auto;
+  padding: 25px;
+  text-align: center;
 }
 
 .header__loging {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-self: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-self: center;
 }
 
-
 .header__login img {
-    width: 40px;
-    height: auto;
-
-    
+  width: 40px;
+  height: auto;
 }
 
 .header__login-signup {
-    display: flex;
-    text-align: center;
-
+  display: flex;
+  text-align: center;
 }
-
 .header__login-signup li {
-    list-style: none;
-    padding: 5px;
-    color: var(--color-secondary);
+  list-style: none;
+  padding: 5px;
+  color: #ECE5D1;
 }
 
 .social-icons {
-    list-style-type: none;
-    margin: 25px;
-    padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: auto;
+  padding: 0;
 }
 
 .social-icon {
-    display: inline-block;
-    padding: 10px;
+  display: inline-block;
+  padding: 10px;
 }
 
-.social-icons img {
+.social-icon img {
     width: 24px;
     height: auto;
 }
 
 /*estilos de la navbar dentro del header*/
-
 .header__navbar {
-    display: flex;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
 }
 
-.logo img{
-    display: inline;
-    width: 800px;
-    height: auto;
-    text-align: center;
-
-
-}
-
-.login {
+.header__navbar-list {
     display: flex;
     flex-direction: column;
-    margin-left: 300px;
-}
-
-.login img {
-    width: 40px;
-    height: auto;
-}
-
-.login_signup {
-    display: flex;
-    margin-right: 60px;
-
-}
-
-.login_signup li {
-    list-style: none;
-    padding-right: 10px;
-    color: var(--color-secondary)
-}
-
-.navbar {
-    display: flex;
     width: 100%;
-    justify-content: space-between;
-    padding: 0px 50px;
-    align-items: left;
-}
-
-.navbar_list {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 10px 75px;
-    align-items: left;
+    text-align: center;
 
 }
 
 .header__navbar-item {
-    color: var(--color-secondary);
-    font-size: 1.5rem;
+  color: #ECE5D1;
+  font-size: 1.5rem;
+  transition: all 0.5s;
 }
 
 /*cambiamos el color del icono del menú hamburquesa para que sea mantenga el formato*/
-
 .navbar-toggler {
-    border-color: var(--color-secondary);
+  border-color: #ECE5D1;
 }
 
-
 .navbar-toggler-icon {
-
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28236, 229, 209, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); 
-
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28236, 229, 209, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .header__navbar-item:hover {
-    color: var(--color-primary);
-    background-color: var(--color-secondary);
-    padding: 0px 10px;
-    border-radius: 30px;
+  color: var(--color-primary);
+  background-color: #ECE5D1;
+  padding: 0px 10px;
+  border-radius: 30px;
 }
 
 /*estilos del contenido principal*/
 .main__banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    width: 100%;
-    height: 90vh;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    
-    ,url(../img/principal.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/principal.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
 }
 
 .main__content {
-   width: 100%;
-   height: auto;
-   padding: 15px;
+  width: 100%;
+  height: auto;
+  padding: 15px;
 }
-
 .main__content img {
-
-    width: 100%;
+  width: 100%;
 }
 
 .main__content-short-description {
-    color: var(--color-secondary);
-    display: block;
-    font-size: 2rem;
-    padding: 10px;
+  color: #ECE5D1;
+  display: block;
+  font-size: 2rem;
+  padding: 10px;
 }
 
 .main__content-unirme-button {
-    padding: 10px 25px;
-    background-color: rgba(10, 10, 10, 0.815);
-    color: var(--color-primary01);
-    border-radius: 50px;
-    border: 3px solid var(--color-primary01);
-    font-size: 32px;
-    font-weight: bold;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s;
-    margin: 10px;
+  padding: 10px 25px;
+  background-color: rgba(10, 10, 10, 0.815);
+  color: #B0D3A5;
+  border-radius: 50px;
+  border: 3px solid #B0D3A5;
+  font-size: 32px;
+  font-weight: bold;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s;
+  margin: 10px;
 }
-
 .main__content-unirme-button:hover {
-    background-color: rgba(73, 72, 72, 0.281); 
+  background-color: rgba(73, 72, 72, 0.281);
 }
 
-
-
-footer {
-    background-color: var(--color-primary01);
-    margin-top: 30px;
-    padding: 20px;
-    text-align: center;
-}
-
-footer > span {
-    margin-top: 5px;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 0.9em;
-    color: #444;
-}
-
-.container {
+.main__info-container {
     width: 80%;
     height: auto;
     display: flex;
@@ -295,211 +212,264 @@ footer > span {
 }
 
 .main__info-container-title {
-    color: var(--color-secondary);
-    margin: 30px;
-    border-bottom: 3px solid  var(--color-secondary);
-  }
-
+  color: #ECE5D1;
+  margin: 30px;
+  border-bottom: 3px solid #ECE5D1;
+}
 .main__info-container-title h1 {
-    text-transform: uppercase;
-    font-size: 2.5rem;
-  }
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
 
 .main__info-container-contenido {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    padding: 30px;
-
-} 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 30px;
+}
 
 .main__info-container-contenido-text {
-    display: block;
-    color: var(--color-secondary);
-    align-items: center;
-    margin: 30px;
-    font-size: 1.5rem;
-    text-align: justify;
- }
-
-.main__info-container-contenido-text  h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
-    font-weight: bold;
- }
-
-
+  display: block;
+  color: #ECE5D1;
+  align-items: center;
+  margin: 30px;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.main__info-container-contenido-text h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+}
 
 .main__info-container-contenido img {
-    width: 100%;
-    height: auto;
-    border-radius: 30px;
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
 }
 
 /*estilos de las categorías en el main con grid y bootstrap*/
-
 .main__categories-elements {
-
-    display: grid;
-    grid-template-columns: 1fr; 
-    grid-gap: 30px;
-    text-align: center;
-    padding: 50px;
-
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  text-align: center;
+  padding: 50px;
 }
 
 .main__categories h4 {
-    text-align: center;
-    margin: 50px 0;
-    font-size: 2rem;
-    color: var(--color-secondary);
+  text-align: center;
+  margin: 50px 0;
+  font-size: 2rem;
+  color: #ECE5D1;
 }
 
 .card {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
 }
 
-.card-img-top {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.card-img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
 }
 
 .card-body {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-
+  background-color: #333831;
+  color: #ECE5D1;
 }
 
 .btn {
-    background-color: var(--color-primary01);
+  background-color: #B0D3A5;
+  transition: all 0.5s;
+}
+.btn:hover {
+  border: #ECE5D1 solid 2px;
 }
 
+/*estilos de las tabs de bootstrap*/
+.main__tabs {
+  text-align: center;
+}
 
+.main__tabs-elements {
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin: 50px;
+  border-radius: 10px;
+  border: 2px solid #ECE5D1;
+}
+
+.nav-link {
+  color: #ECE5D1;
+  transition: all 0.5s;
+}
+.nav-link:hover {
+  color: #ECE5D1;
+  opacity: 0.8;
+}
+
+.main__tabs-elements .nav .active {
+  background-color: #ECE5D1;
+}
+
+.tab-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.tab-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  margin: 25px 0;
+  border-radius: 5px;
+}
+
+.tab-content-text {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+.tab-content-text h3 {
+  color: #ECE5D1;
+  text-align: center;
+}
+.tab-content-text p {
+  color: #ECE5D1;
+  margin: 10px;
+}
 
 /*estilos del footer*/
-
 footer {
-    
-    background-color: var(--color-primary01);
-    margin-top: 30px;
-    padding: 20px 50px;
-    text-align: center;
-    width: 100%;
-    min-height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background-color: #B0D3A5;
+  margin-top: 30px;
+  padding: 20px 50px;
+  text-align: center;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer__contacto {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.footer__contacto h3 {
+  order: -1;
 }
 
 .footer__copyright {
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
-    font-size: 0.9em;
-    color: #444;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9em;
+  color: #444;
 }
 
-
 /*Ajustar elementos a desktop*/
-
 @media (min-width: 1023px) {
-
-    /*cambiar la dirección del header, así como el espacio entre los elementos*/
-    .header__top {
-        flex-direction: row;
-        padding-top: 50px;
-        justify-content: space-around;
-        gap: 45px;
-
-    }
-
-    /*ajustamos el tamaño del logo para que cubra un 50% de la pantalla*/
-
-    .header__logo {
-        width: 50vw;
-        height: auto;
-        padding: 0;
-    }
-
-    .header__logo img {
-        width: 100%;
-        height: auto;
-        padding: 0;
-    
-    
-    }
- 
-    /*cambiamos el orden de los elementos para que los iconos de redes sociales aparezcan primero de izquierda a derecha*/
-    .social-icons {
-        order: -1;
-        margin: 0;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-
-    .social-icon img {
-        width: 25px;
-        height: auto;
-    }
-
-    .header__login img {
-        width: 10px;
-        height: auto;
-    
-    }
-
-   /*modificamos la clase de la navbar de bootstrap para que se adapte al tamaño de la pantalla*/
-
-   .header__navbar-list {
+  /*cambiar la dirección del header, así como el espacio entre los elementos*/
+  .header__top {
+    flex-direction: row;
+    padding-top: 50px;
+    justify-content: space-around;
+    gap: 45px;
+  }
+  /*ajustamos el tamaño del logo para que cubra un 50% de la pantalla*/
+  .header__logo {
+    width: 50vw;
+    height: auto;
+    padding: 0;
+  }
+  .header__logo img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+  /*cambiamos el orden de los elementos para que los iconos de redes sociales aparezcan primero de izquierda a derecha*/
+  .social-icons {
+    order: -1;
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .social-icon img {
+    width: 25px;
+    height: auto;
+  }
+  .header__login img {
+    width: 10px;
+    height: auto;
+  }
+  /*modificamos la clase de la navbar de bootstrap para que se adapte al tamaño de la pantalla*/
+  .header__navbar-list {
     flex-direction: row;
     width: 100%;
     gap: 100px;
-    justify-content: space-between
-
-    }
-
-    /*ocultamos el título del menú desplegable para que solo aparezca en la vista movil*/
-
-    .navbar-brand {
-        display: none;
-    }
-
-    /*modificamos el tamaño del logo en el banner y lo alineamos en la parte de abajo*/
-
-    .main__content {
-        width: 30%;
-    }
-
-    .main__banner {
-        justify-content: flex-end;
-    }
-
-    /*Ajustamos el GRID a 3 columnas para que acomode mejor las categorías*/
-
-    .main__categories-elements {
-
-        grid-template-columns: repeat(3, 1fr); 
-    }
-
-    /*cambiamos la dirección flex de la tarjeta de informacion en las categorias para que se adapte a desktop*/
-
-    .main__info-container-contenido {
-        flex-direction: row;
-        text-align: center;
-        justify-content: center;
-        padding: 30px;
-    
-    } 
-
-    .main__info-container-contenido img {
-        width: 500px;
-        height: auto;
-    }
-    
+    justify-content: space-between;
+  }
+  /*ocultamos el título del menú desplegable para que solo aparezca en la vista movil*/
+  .navbar-brand {
+    display: none;
+  }
+  /*modificamos el tamaño del logo en el banner y lo alineamos en la parte de abajo*/
+  .main__content {
+    width: 30%;
+  }
+  .main__banner {
+    justify-content: flex-end;
+  }
+  /*Ajustamos el GRID a 3 columnas para que acomode mejor las categorías*/
+  .main__categories-elements {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /*cambiamos la dirección flex de la tarjeta de informacion en las categorias para que se adapte a desktop*/
+  .main__info-container-contenido {
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+  }
+  .main__info-container-contenido img {
+    width: 500px;
+    height: auto;
+  }
+  /*hacer responsive para desktop las tabs de bootstrap*/
+  .tab-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .tab-container img {
+    width: 700px;
+    height: 350px;
+    object-fit: cover;
+    margin: 15px;
+  }
+  .tab-content-text {
+    margin: 10px;
+  }
+  .tab-content-text h3 {
+    margin-top: 15px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  .tab-content-text p {
+    font-size: 1.5rem;
+  }
 }
+
+/*# sourceMappingURL=styles.css.map */
