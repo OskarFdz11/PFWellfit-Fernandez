@@ -108,10 +108,9 @@ ul {
   display: inline-block;
   padding: 10px;
 }
-
 .social-icon img {
-    width: 24px;
-    height: auto;
+  width: 24px;
+  height: auto;
 }
 
 /*estilos de la navbar dentro del header*/
@@ -123,11 +122,10 @@ ul {
 }
 
 .header__navbar-list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
 }
 
 .header__navbar-item {
@@ -200,15 +198,14 @@ ul {
 }
 
 .main__info-container {
-    width: 80%;
-    height: auto;
-    display: flex;
-    margin: 10%;
-    flex-direction: column;
-    border: 3px solid var(--color-secondary);
-    border-radius: 25px;
-    text-align: center;
-
+  width: 80%;
+  height: auto;
+  display: flex;
+  margin: 10%;
+  flex-direction: column;
+  border: 3px solid #ECE5D1;
+  border-radius: 25px;
+  text-align: center;
 }
 
 .main__info-container-title {
