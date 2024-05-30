@@ -1,0 +1,90 @@
+/*Ajustar elementos a desktop*/
+
+@media (min-width: 1023px) {
+    /*cambiar la dirección del header, así como el espacio entre los elementos*/
+
+    .header__top {
+        flex-direction: row;
+        padding-top: 50px;
+        justify-content: space-around;
+        gap: 45px;
+    }
+
+    /*ajustamos el tamaño del logo para que cubra un 50% de la pantalla*/
+
+    .header__logo {
+        width: 50vw;
+        height: auto;
+        padding: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            padding: 0;
+        }
+    }
+
+    /*cambiamos el orden de los elementos para que los iconos de redes sociales aparezcan primero de izquierda a derecha*/
+
+    .social-icons {
+        order: -1;
+        margin: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .social-icon img {
+        width: 25px;
+        height: auto;
+    }
+
+    .header__login img {
+        width: 10px;
+        height: auto;
+    }
+
+    /*modificamos la clase de la navbar de bootstrap para que se adapte al tamaño de la pantalla*/
+
+    .header__navbar-list {
+        flex-direction: row;
+        width: 100%;
+        gap: 100px;
+        justify-content: space-between;
+    }
+
+    /*ocultamos el título del menú desplegable para que solo aparezca en la vista movil*/
+
+    .navbar-brand {
+        display: none;
+    }
+
+    /*modificamos el tamaño del logo en el banner y lo alineamos en la parte de abajo*/
+
+    .main__content {
+        width: 30%;
+    }
+
+    .main__banner {
+        justify-content: flex-end;
+    }
+
+    /*Ajustamos el GRID a 3 columnas para que acomode mejor las categorías*/
+
+    .main__categories-elements {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /*cambiamos la dirección flex de la tarjeta de informacion en las categorias para que se adapte a desktop*/
+
+    .main__info-container-contenido {
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        padding: 30px;
+
+        img {
+            width: 500px;
+            height: auto;
+        }
+    }
+}
