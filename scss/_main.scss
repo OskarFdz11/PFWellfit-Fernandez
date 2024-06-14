@@ -109,7 +109,7 @@
     padding: 50px;
 }
 
-.main__categories h4 {
+.main__categories h3 {
     text-align: center;
     margin: 50px 0;
     font-size: 2rem;
@@ -120,12 +120,14 @@
     width: 100%;
     height: auto;
     box-sizing: border-box;
+    border: 2px solid $color-secondary;
 }
 
 .card-img {
     width: 100%;
     height: 50vh;
     object-fit: cover;
+    border-radius: 0;
 }
 
 .card-body {
@@ -138,7 +140,8 @@
     transition: all 0.5s;
 
     &:hover {
-        border: $color-secondary solid 2px;
+        background-color: $color-secondary;
+        color: $color-primary;
     }
 }
 
@@ -146,6 +149,10 @@
 
 .main__tabs {
     text-align: center;
+
+    h3 {
+        color: $color-secondary;
+    }
 }
 
 .main__tabs-elements {
@@ -154,21 +161,33 @@
     text-align: center;
     margin: 50px;
     border-radius: 10px;
-    border: 2px solid $color-secondary;
 }
 
 .nav-link {
     color: $color-secondary;
     transition: all 0.5s;
+    border-radius: 10px 10px 0 0;
+
+
 
     &:hover {
         color: $color-secondary;
         opacity: 0.8;
+        border-radius: 10px 10px 0 0;
     }
+
 }
 
 .main__tabs-elements .nav .active {
     background-color: $color-secondary;
+    border-radius: 10px 10px 0 0;
+}
+
+.tab-content {
+    border-right: 2px solid $color-secondary;
+    border-left: 2px solid $color-secondary;
+    border-bottom: 2px solid $color-secondary;
+    border-radius: 0 0 10px 10px;
 }
 
 .tab-container {
@@ -202,4 +221,77 @@
     }
 
 
+}
+
+/*estilos para la pagina de contacto*/
+
+.main__contact-header {
+
+    h2 {
+        color: $color-secondary;
+    }
+
+    p {
+        color: $color-secondary;
+    }
+
+}
+
+.form-label {
+    color: $color-secondary;
+}
+
+.form-control {
+    background-color: $color-primary;
+    color: $color-secondary;
+
+    &:focus {
+
+        background-color: $color-primary;
+        box-shadow: none;
+        border: 2px solid $color-secondary;
+        color: $color-secondary;
+
+    }
+
+}
+
+
+.input-group-text {
+    background-color: $color-secondary;
+}
+
+.contact-btn:hover {
+
+    background-color: $color-secondary;
+}
+
+/*estilos personalizados de las tarjetas de articulos de bootstrap*/
+
+.category-title {
+    color: $color-secondary;
+}
+
+.category-description {
+    color: $color-secondary;
+    opacity: 0.8;
+}
+
+.article-body,
+.card-text {
+    background-color: $color-primary01;
+    color: $color-primary;
+
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-img-top {
+    img {
+
+        border-radius: 10px 10px 0 0;
+
+    }
 }

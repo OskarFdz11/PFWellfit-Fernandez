@@ -255,7 +255,7 @@ ul {
   padding: 50px;
 }
 
-.main__categories h4 {
+.main__categories h3 {
   text-align: center;
   margin: 50px 0;
   font-size: 2rem;
@@ -266,12 +266,14 @@ ul {
   width: 100%;
   height: auto;
   box-sizing: border-box;
+  border: 2px solid #ECE5D1;
 }
 
 .card-img {
   width: 100%;
   height: 50vh;
   object-fit: cover;
+  border-radius: 0;
 }
 
 .card-body {
@@ -284,12 +286,16 @@ ul {
   transition: all 0.5s;
 }
 .btn:hover {
-  border: #ECE5D1 solid 2px;
+  background-color: #ECE5D1;
+  color: #333831;
 }
 
 /*estilos de las tabs de bootstrap*/
 .main__tabs {
   text-align: center;
+}
+.main__tabs h3 {
+  color: #ECE5D1;
 }
 
 .main__tabs-elements {
@@ -298,20 +304,29 @@ ul {
   text-align: center;
   margin: 50px;
   border-radius: 10px;
-  border: 2px solid #ECE5D1;
 }
 
 .nav-link {
   color: #ECE5D1;
   transition: all 0.5s;
+  border-radius: 10px 10px 0 0;
 }
 .nav-link:hover {
   color: #ECE5D1;
   opacity: 0.8;
+  border-radius: 10px 10px 0 0;
 }
 
 .main__tabs-elements .nav .active {
   background-color: #ECE5D1;
+  border-radius: 10px 10px 0 0;
+}
+
+.tab-content {
+  border-right: 2px solid #ECE5D1;
+  border-left: 2px solid #ECE5D1;
+  border-bottom: 2px solid #ECE5D1;
+  border-radius: 0 0 10px 10px;
 }
 
 .tab-container {
@@ -340,6 +355,61 @@ ul {
 .tab-content-text p {
   color: #ECE5D1;
   margin: 10px;
+}
+
+/*estilos para la pagina de contacto*/
+.main__contact-header h2 {
+  color: #ECE5D1;
+}
+.main__contact-header p {
+  color: #ECE5D1;
+}
+
+.form-label {
+  color: #ECE5D1;
+}
+
+.form-control {
+  background-color: #333831;
+  color: #ECE5D1;
+}
+.form-control:focus {
+  background-color: #333831;
+  box-shadow: none;
+  border: 2px solid #ECE5D1;
+  color: #ECE5D1;
+}
+
+.input-group-text {
+  background-color: #ECE5D1;
+}
+
+.contact-btn:hover {
+  background-color: #ECE5D1;
+}
+
+/*estilos personalizados de las tarjetas de articulos de bootstrap*/
+.category-title {
+  color: #ECE5D1;
+}
+
+.category-description {
+  color: #ECE5D1;
+  opacity: 0.8;
+}
+
+.article-body,
+.card-text {
+  background-color: #B0D3A5;
+  color: #333831;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-img-top img {
+  border-radius: 10px 10px 0 0;
 }
 
 /*estilos del footer*/
