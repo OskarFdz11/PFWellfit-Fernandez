@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 3px solid red;
 }
 
 body {
@@ -62,18 +61,12 @@ ul {
 
 /*parte superior del header*/
 .header__top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "header__logo header__logo" "social-icons header__login";
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 /*elementos y sub elementos del header*/
-.header__logo {
-  grid-area: header__logo;
-}
-
 .header__logo img {
   width: 100%;
   height: auto;
@@ -82,7 +75,6 @@ ul {
 }
 
 .header__loging {
-  grid-area: header__login;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -106,7 +98,6 @@ ul {
 }
 
 .social-icons {
-  grid-area: social-icons;
   display: flex;
   flex-wrap: nowrap;
   margin: auto;
@@ -166,11 +157,11 @@ ul {
 .main__banner {
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-end;
+  text-align: end;
   flex-direction: column;
   width: 100%;
-  height: auto;
+  height: 90vh;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/principal.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -178,8 +169,12 @@ ul {
 }
 
 .main__content {
-  width: 100%;
-  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  height: auto;
   padding: 15px;
 }
 .main__content img {
@@ -464,7 +459,7 @@ footer {
 }
 
 /*Ajustar elementos a desktop*/
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   /*cambiar la dirección del header, así como el espacio entre los elementos*/
   .header__top {
     flex-direction: row;
@@ -482,13 +477,6 @@ footer {
     width: 100%;
     height: auto;
     padding: 0;
-  }
-  .header__top {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 25px;
-    grid-template-areas: "social-icons header__logo header__login";
   }
   /*cambiamos el orden de los elementos para que los iconos de redes sociales aparezcan primero de izquierda a derecha*/
   .social-icons {
@@ -523,9 +511,6 @@ footer {
   /*modificamos el tamaño del logo en el banner y lo alineamos en la parte de abajo*/
   .main__content {
     width: 30%;
-  }
-  .main__banner {
-    justify-content: flex-end;
   }
   /*Ajustamos el GRID a 3 columnas para que acomode mejor las categorías*/
   .main__categories-elements {
@@ -565,6 +550,11 @@ footer {
   }
   .tab-content-text p {
     font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1023px) {
+  .header__navbar-item {
+    padding: 0 25px;
   }
 }
 

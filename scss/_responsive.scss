@@ -1,6 +1,6 @@
 /*Ajustar elementos a desktop*/
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
     /*cambiar la dirección del header, así como el espacio entre los elementos*/
 
     .header__top {
@@ -22,16 +22,6 @@
             height: auto;
             padding: 0;
         }
-    }
-
-    .header__top {
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr; 
-        grid-template-rows: 1fr; 
-        gap: 25px ; 
-        grid-template-areas: 
-          "social-icons header__logo header__login"
-          ; 
     }
 
     /*cambiamos el orden de los elementos para que los iconos de redes sociales aparezcan primero de izquierda a derecha*/
@@ -79,9 +69,6 @@
         width: 30%;
     }
 
-    .main__banner {
-        justify-content: flex-end;
-    }
 
     /*Ajustamos el GRID a 3 columnas para que acomode mejor las categorías*/
 
@@ -133,6 +120,14 @@
         p {
             font-size: 1.5rem;
         }
+    }
+
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1023px) {
+
+    .header__navbar-item {
+        padding: 0 25px;
     }
 
 }

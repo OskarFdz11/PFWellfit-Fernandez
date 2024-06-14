@@ -12,21 +12,12 @@
 /*parte superior del header*/
 
 .header__top {
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "header__logo header__logo"
-      "social-icons header__login"
-      ; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 /*elementos y sub elementos del header*/
-
-.header__logo {
-    grid-area: header__logo;
-}
 
 .header__logo img {
     width: 100%;
@@ -36,7 +27,6 @@
 }
 
 .header__loging {
-    grid-area: header__login;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -46,9 +36,7 @@
 }
 
 .header__loging img {
-
     width: 30px;
-      
 }
 
 .header__login-signup {
@@ -63,7 +51,6 @@
 }
 
 .social-icons {
-    grid-area: social-icons;
     display: flex;
     flex-wrap: nowrap;
     margin: auto;
@@ -85,7 +72,7 @@
 
 /*estilos de la navbar dentro del header*/
 
-.header__navbar  {
+.header__navbar {
     display: flex;
     width: 100%;
     text-align: center;
