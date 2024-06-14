@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 3px solid red;
 }
 
 body {
@@ -61,13 +62,18 @@ ul {
 
 /*parte superior del header*/
 .header__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "header__logo header__logo" "social-icons header__login";
 }
 
 /*elementos y sub elementos del header*/
+.header__logo {
+  grid-area: header__logo;
+}
+
 .header__logo img {
   width: 100%;
   height: auto;
@@ -76,15 +82,17 @@ ul {
 }
 
 .header__loging {
+  grid-area: header__login;
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
-.header__login img {
-  width: 40px;
-  height: auto;
+.header__loging img {
+  width: 30px;
 }
 
 .header__login-signup {
@@ -98,10 +106,14 @@ ul {
 }
 
 .social-icons {
+  grid-area: social-icons;
   display: flex;
   flex-wrap: nowrap;
   margin: auto;
   padding: 0;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .social-icon {
@@ -109,7 +121,7 @@ ul {
   padding: 10px;
 }
 .social-icon img {
-  width: 24px;
+  width: 25px;
   height: auto;
 }
 
@@ -158,7 +170,7 @@ ul {
   text-align: center;
   flex-direction: column;
   width: 100%;
-  height: 90vh;
+  height: auto;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/principal.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -167,7 +179,7 @@ ul {
 
 .main__content {
   width: 100%;
-  height: auto;
+  height: 50vh;
   padding: 15px;
 }
 .main__content img {
@@ -260,6 +272,7 @@ ul {
   margin: 50px 0;
   font-size: 2rem;
   color: #ECE5D1;
+  text-transform: uppercase;
 }
 
 .card {
@@ -274,11 +287,16 @@ ul {
   height: 50vh;
   object-fit: cover;
   border-radius: 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
   background-color: #333831;
   color: #ECE5D1;
+}
+
+.card-title {
+  text-transform: uppercase;
 }
 
 .btn {
@@ -446,7 +464,7 @@ footer {
 }
 
 /*Ajustar elementos a desktop*/
-@media (min-width: 1023px) {
+@media (min-width: 992px) {
   /*cambiar la dirección del header, así como el espacio entre los elementos*/
   .header__top {
     flex-direction: row;
@@ -464,6 +482,13 @@ footer {
     width: 100%;
     height: auto;
     padding: 0;
+  }
+  .header__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 25px;
+    grid-template-areas: "social-icons header__logo header__login";
   }
   /*cambiamos el orden de los elementos para que los iconos de redes sociales aparezcan primero de izquierda a derecha*/
   .social-icons {
@@ -485,7 +510,11 @@ footer {
     flex-direction: row;
     width: 100%;
     gap: 100px;
-    justify-content: space-between;
+    justify-content: center;
+  }
+  /*damos un poco de margen para la version desktop del header*/
+  .navbar {
+    margin-top: 15px;
   }
   /*ocultamos el título del menú desplegable para que solo aparezca en la vista movil*/
   .navbar-brand {
