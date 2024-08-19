@@ -1,0 +1,84 @@
+//Estilos del carrito lateral
+
+$cart-bg-color: #f8f9fa;
+$cart-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+$cart-width: 300px;
+$cart-z-index: 1000;
+$button-bg-color: #B0D3A5;
+$button-color: white;
+$button-z-index: 1100;
+$padding: 20px;
+
+.sidecart {
+    width: $cart-width;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -$cart-width;
+    background-color: $cart-bg-color;
+    box-shadow: $cart-shadow;
+    transition: right 0.3s ease;
+    z-index: $cart-z-index;
+    padding: $padding;
+    display: flex;
+    flex-direction: column;
+
+    &.open {
+        right: 0;
+    }
+}
+
+.cart-items-container {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.cart-total-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #ccc;
+    background-color: $cart-bg-color;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    overflow: hidden; // Asegura que los elementos no causen desbordamiento lateral
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .details {
+        flex: 1;
+        margin-left: 10px;
+    }
+
+    .quantity {
+        display: flex;
+        align-items: center;
+
+        button {
+            padding: 5px;
+            margin: 0 5px;
+        }
+    }
+}
+
+.toggle-cart-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: $button-bg-color;
+    color: $button-color;
+    border: none;
+    cursor: pointer;
+    z-index: $button-z-index;
+
+    &.hidden {
+        display: none;
+    }
+}
