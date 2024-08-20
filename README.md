@@ -10,6 +10,7 @@ Como parte del curso de JavaScript, se han añadido nuevas funcionalidades para 
 Carrito de Compras Lateral:
 
 Un carrito de compras que se despliega desde el lateral derecho de la pantalla. Este carrito permite agregar, actualizar y eliminar productos seleccionados por el usuario.
+
 Generación Dinámica de Tarjetas de Productos:
 
 Los productos del blog se generan dinámicamente a partir de un arreglo de objetos utilizando JavaScript, lo que permite que las tarjetas de producto se creen de manera eficiente y escalable en la página de la tienda.
