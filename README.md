@@ -32,7 +32,7 @@ Tecnologías Utilizadas:
 
 HTML: Para la estructura del blog.
 
-CSS y Sass: Para los estilos y diseño responsivo.
+CSS y SASS: Para los estilos y diseño responsivo.
 
 Bootstrap: Para algunos elementos de diseño y estructura.
 
