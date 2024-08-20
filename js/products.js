@@ -1,3 +1,5 @@
+// Array que guarda las propiedades de los productos mediante objetos
+
 const products = [
     {
         title: "Camiseta Deportiva",

@@ -138,20 +138,6 @@
     </header>
 
     <!--Contenido principal-->
-
-
-    <!-- Botón para mostrar/ocultar el carrito -->
-    <button class="btn toggle-cart-btn">Carrito</button>
-
-    <!-- Carrito lateral -->
-    <div class="sidecart">
-        <button class="close-cart-btn">&times;</button>
-        <h2>Tu Carrito</h2>
-        <div id="cart-items"></div>
-        <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
-        <button class="finalize-cart-btn" style="background-color: green;">Finalizar Compra</button>
-    </div>
-
     <main>
 
         <!--targetas de los productos con bootstrap-->
@@ -170,12 +156,22 @@
 
             <div class="container overflow-hidden mt-5">
                 <div class="row gy-4 gy-xxl-5" id="shop-items">
-                    <!-- Las tarjetas de blog se generarán aquí -->
+                    <!-- Las tarjetas de blog se generaran dinámicamente aquí -->
                 </div>
             </div>
-
-
         </section>
+
+        <!-- Botón para mostrar/ocultar el carrito -->
+        <button class="btn toggle-cart-btn">Carrito</button>
+
+        <!-- Carrito lateral -->
+        <div class="sidecart">
+            <button class="close-cart-btn">&times;</button>
+            <h2>Tu Carrito</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+            <button class="finalize-cart-btn" style="background-color: green;">Finalizar Compra</button>
+        </div>
 
     </main>
 

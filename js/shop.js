@@ -1,6 +1,5 @@
 // Función para renderizar las tarjetas de los productos en la página de tienda
 
-// Array con objetos donde se guarda la información de cada producto
 document.addEventListener("DOMContentLoaded", function() {
  
 
