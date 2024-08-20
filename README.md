@@ -31,7 +31,11 @@ También se encarga de la persistencia del estado del carrito utilizando LocalSt
 Tecnologías Utilizadas:
 
 HTML: Para la estructura del blog.
+
 CSS y Sass: Para los estilos y diseño responsivo.
+
 Bootstrap: Para algunos elementos de diseño y estructura.
+
 JavaScript: Para las funcionalidades dinámicas y manejo del DOM.
+
 LocalStorage: Para persistir datos del carrito en el navegador.
