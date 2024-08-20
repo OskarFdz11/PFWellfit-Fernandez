@@ -574,44 +574,58 @@ footer {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden; /* Evita el scroll horizontal */
 }
+
 .sidecart.open {
   right: 0;
 }
 
-.cart-items-container {
+#cart-items {
   flex-grow: 1;
   overflow-y: auto;
-}
-
-.cart-total-container {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-top: 1px solid #ccc;
-  background-color: #f8f9fa;
+  margin-bottom: 20px;
+  overflow-x: hidden; /* Evita el scroll horizontal */
 }
 
 .cart-item {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Asegura que los elementos estén en columna */
+  align-items: flex-start; /* Alinea los elementos al inicio */
   margin-bottom: 15px;
   overflow: hidden;
+  max-width: 100%; /* Evita que los elementos se desborden */
+  word-wrap: break-word; /* Ajusta los textos largos */
 }
+
 .cart-item img {
   width: 50px;
   height: 50px;
+  margin-bottom: 10px; /* Añade margen debajo de la imagen */
 }
+
 .cart-item .details {
-  flex: 1;
-  margin-left: 10px;
+  width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+  margin-bottom: 10px; /* Añade margen debajo de los detalles */
 }
+
 .cart-item .quantity {
   display: flex;
-  align-items: center;
+  justify-content: left;
+  width: 100%;
+  gap: 10px;
 }
+
 .cart-item .quantity button {
   padding: 5px;
-  margin: 0 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.cart-total {
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .toggle-cart-btn {
@@ -625,8 +639,30 @@ footer {
   cursor: pointer;
   z-index: 1100;
 }
-.toggle-cart-btn.hidden {
+
+.finalize-cart-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.hidden {
   display: none;
+}
+
+.close-cart-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */

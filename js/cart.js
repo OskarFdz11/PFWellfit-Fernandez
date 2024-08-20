@@ -1,40 +1,41 @@
-// Script cart.js
+// script cart
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     const cartContainer = document.querySelector(".sidecart");
-    const cartItemsContainer = document.querySelector("#cart-items");
-    const cartTotalElement = document.querySelector("#cart-total");
-    const toggleCartButtons = document.querySelectorAll(".toggle-cart-btn");
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartTotalElement = document.getElementById("cart-total");
+    const toggleCartButton = document.querySelector(".toggle-cart-btn");
+    const closeCartButton = document.querySelector(".close-cart-btn");
 
     // Función para alternar la visibilidad del carrito
     function toggleCart() {
         cartContainer.classList.toggle("open");
-        toggleCartButtons.forEach(button => {
-            button.classList.toggle("hidden", cartContainer.classList.contains("open"));
-        });
-    }
-    // Ocultar el botón de carrito y cerrarlo al hacer clic fuera
-
-    document.addEventListener("click", function(event) {
-        if (!cartContainer.contains(event.target) && !event.target.closest('.toggle-cart-btn') && cartContainer.classList.contains("open")) {
-            toggleCart();
+        if (cartContainer.classList.contains("open")) {
+            toggleCartButton.classList.add("hidden"); // Oculta el botón de carrito cuando está abierto
+        } else {
+            toggleCartButton.classList.remove("hidden"); // Muestra el botón de carrito cuando está cerrado
         }
-    });
+    };
 
-    // Agregar evento para los botones de alternar carrito
-    toggleCartButtons.forEach(button => {
-        button.addEventListener("click", toggleCart);
-    });
+    // Función para cerrar el carrito
+    function closeCart() {
+        cartContainer.classList.remove("open");
+        toggleCartButton.classList.remove("hidden");
+    };
+
+    // Agregar evento para el botón de alternar carrito
+    toggleCartButton.addEventListener("click", toggleCart);
+    closeCartButton.addEventListener("click", closeCart);
 
     // Función para agregar producto al carrito
-    window.addToCart = function(title, price, image, alt) {
+    window.addToCart = function (title, price, image) {
         const item = cart.find(item => item.title === title);
         if (item) {
             item.quantity++;
         } else {
-            cart.push({ title, price, quantity: 1, image, alt });
+            cart.push({ title, price, quantity: 1, image });
         }
         saveCart();
         renderCart();
@@ -45,10 +46,10 @@ document.addEventListener("DOMContentLoaded", function() {
         cart = cart.filter(item => item.title !== title);
         saveCart();
         renderCart();
-    }
+    };
 
     // Función para actualizar la cantidad de un producto
-    window.updateQuantity = function(title, quantity) {
+    window.updateQuantity = function (title, quantity) {
         const item = cart.find(item => item.title === title);
         if (item) {
             item.quantity += quantity;
@@ -63,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Guardar el carrito en localStorage
     function saveCart() {
         localStorage.setItem("cart", JSON.stringify(cart));
-    }
+    };
 
     // Renderizar el carrito
     function renderCart() {
@@ -75,15 +76,17 @@ document.addEventListener("DOMContentLoaded", function() {
             const cartItem = document.createElement("div");
             cartItem.className = "cart-item";
             cartItem.innerHTML = `
-                <img src="${item.image}" alt="${item.alt}">
-                <div class="details">
-                    <h4>${item.title}</h4>
-                    <p>$${item.price.toFixed(2)}</p>
-                </div>
-                <div class="quantity">
-                    <button onclick="updateQuantity('${item.title}', 1)">+</button>
-                    <span>${item.quantity}</span>
-                    <button onclick="updateQuantity('${item.title}', -1)">-</button>
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.alt}">
+                    <div class="details">
+                        <h4>${item.title}</h4>
+                        <p>$${item.price.toFixed(2)}</p>
+                        <div class="quantity">
+                            <button onclick="updateQuantity('${item.title}', 1)">+</button>
+                            <span>${item.quantity}</span>
+                            <button onclick="updateQuantity('${item.title}', -1)">-</button>
+                        </div>
+                    </div>
                 </div>
             `;
 
@@ -91,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         cartTotalElement.textContent = total.toFixed(2);
-    }
+    };
 
     // Inicializar el carrito al cargar la página
     renderCart();

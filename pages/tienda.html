@@ -22,6 +22,10 @@
     <link rel="stylesheet"
         href="https://unpkg.com/bs-brain@2.0.4/components/contacts/contact-1/assets/css/contact-1.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        
+
+    </style>
 </head>
 
 <body>
@@ -135,17 +139,17 @@
 
     <!--Contenido principal-->
 
+
     <!-- Botón para mostrar/ocultar el carrito -->
     <button class="toggle-cart-btn">Carrito</button>
-        
+
     <!-- Carrito lateral -->
     <div class="sidecart">
+        <button class="close-cart-btn">&times;</button>
         <h2>Tu Carrito</h2>
-        <div id="cart-items" class="cart-items-container"></div>
-        <div class="cart-total-container">
-            <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
-            <button class="toggle-cart-btn">Finalizar Compra</button>
-        </div>
+        <div id="cart-items"></div>
+        <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+        <button class="finalize-cart-btn" style="background-color: green;">Finalizar Compra</button>
     </div>
 
     <main>
@@ -156,7 +160,9 @@
                 <div class="row justify-content-md-center">
                     <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
                         <h2 class="category-title mb-4 display-5 text-center">Catálogo de Productos</h2>
-                        <p class="category-description mb-5 text-center lead fs-4">Explora nuestra selección de productos diseñados para potenciar tu rendimiento y bienestar, desde ropa deportiva hasta accesorios esenciales para tus entrenamientos.</p>
+                        <p class="category-description mb-5 text-center lead fs-4">Explora nuestra selección de
+                            productos diseñados para potenciar tu rendimiento y bienestar, desde ropa deportiva hasta
+                            accesorios esenciales para tus entrenamientos.</p>
                         <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
                     </div>
                 </div>
@@ -219,14 +225,17 @@
 
     </footer>
 
+    
+
+
     <!-- Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
     <!--link de bootstrap-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
     <!--script con la información de los productos-->
 
