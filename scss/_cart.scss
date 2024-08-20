@@ -79,9 +79,9 @@ $button-z-index: 1100;
     bottom: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: #B0D3A5;
+    background-color: $color-primary;
     color: white;
-    border: none;
+    border: $color-secondary solid 1px;
     cursor: pointer;
     z-index: 1100;
 }

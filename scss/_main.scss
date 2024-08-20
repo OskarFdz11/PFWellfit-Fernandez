@@ -160,6 +160,16 @@
     }
 }
 
+.btn-dark {
+    background-color: $color-primary;
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: $color-secondary;
+        color: $color-primary;
+    }
+}
+
 /*estilos de las tabs de bootstrap*/
 
 .main__tabs {

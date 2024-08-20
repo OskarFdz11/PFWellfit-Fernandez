@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 ${item.description}
                             </p>
                              <p class="card-text fw-bold">$${item.price.toFixed(2)}</p>
-                            <button class="btn btn-primary" onclick="addToCart('${item.title}', ${item.price}, '${item.image}', '${item.alt}')">Agregar al carrito</button>
+                            <button class="btn btn-dark" onclick="addToCart('${item.title}', ${item.price}, '${item.image}', '${item.alt}')">Agregar al carrito</button>
                         </div>
                     </div>
                 </article>
