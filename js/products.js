@@ -1,76 +1,60 @@
-// Array que guarda las propiedades de los productos mediante objetos
+// Fundicón donde se obtienen los productos
 
-const products = [
-    {
-        title: "Camiseta Deportiva",
-        image: "../img/shop_items/camiseta_deportiva.webp",
-        description: "Camiseta transpirable de alto rendimiento, perfecta para tus entrenamientos.",
-        price: 19.99,
-        alt: "Camiseta deportiva de color azul.",
-        link: "#!"
-    },
-    {
-        title: "Tenis para Correr",
-        image: "../img/shop_items/tenis_correr.webp",
-        description: "Tenis ligeros y cómodos, diseñados para corredores de todos los niveles.",
-        price: 59.99,
-        alt: "Tenis deportivos para correr de color gris.",
-        link: "#!"
-    },
-    {
-        title: "Tapete de Yoga",
-        image: "../img/shop_items/tapete_yoga.webp",
-        description: "Tapete antideslizante de yoga, ideal para tus sesiones de meditación y ejercicio.",
-        price: 24.99,
-        alt: "Tapete de yoga color púrpura.",
-        link: "#!"
-    },
-    {
-        title: "Shorts Deportivos",
-        image: "../img/shop_items/shorts_deportivos.webp",
-        description: "Shorts ligeros y cómodos, perfectos para cualquier tipo de actividad física.",
-        price: 14.99,
-        alt: "Shorts deportivos de color negro.",
-        link: "#!"
-    },
-    {
-        title: "Sudadera con Capucha",
-        image: "../img/shop_items/sudadera_capucha.webp",
-        description: "Sudadera con capucha suave y cálida, ideal para el clima frío.",
-        price: 34.99,
-        alt: "Sudadera con capucha de color gris.",
-        link: "#!"
-    },
-    {
-        title: "Guantes de Entrenamiento",
-        image: "../img/shop_items/guantes_entrenamiento.webp",
-        description: "Guantes acolchados para mejorar el agarre durante el levantamiento de pesas.",
-        price: 12.99,
-        alt: "Guantes de entrenamiento color negro.",
-        link: "#!"
-    },
-    {
-        title: "Botella de Agua Deportiva",
-        image: "../img/shop_items/botella_agua.webp",
-        description: "Botella de agua ligera y duradera, con capacidad de 1 litro.",
-        price: 9.99,
-        alt: "Botella de agua deportiva color azul.",
-        link: "#!"
-    },
-    {
-        title: "Pantalones de Compresión",
-        image: "../img/shop_items/pantalones_compresion.webp",
-        description: "Pantalones de compresión que mejoran la circulación y el rendimiento.",
-        price: 29.99,
-        alt: "Pantalones de compresión color negro.",
-        link: "#!"
-    },
-    {
-        title: "Cuerda para Saltar",
-        image: "../img/shop_items/cuerda_saltar.webp",
-        description: "Cuerda para saltar ajustable, perfecta para ejercicios de cardio.",
-        price: 7.99,
-        alt: "Cuerda para saltar color rojo.",
-        link: "#!"
+document.addEventListener("DOMContentLoaded", () => {
+    const shopProductsContainer = document.querySelector("#shop-items");
+
+    // Función para obtener productos desde la APIS
+    async function fetchProducts() {
+        try {
+            const response = await fetch('https://fakestoreapi.com/products');
+            const products = await response.json();
+            renderShopItems(products);
+        } catch (error) {
+            console.error('Error fetching products:', error);
+        }
     }
-];
+
+        // Función para generar las tarjetas de los productos
+        function renderShopItems(products) {
+            shopProductsContainer.innerHTML = ''; // Limpiar contenedor
+            products.forEach(item => {
+                const itemCard = document.createElement("div");
+                itemCard.className = "col-12 col-md-6 col-lg-4 d-flex";
+    
+                itemCard.innerHTML = `
+                    <article class="d-flex">
+                        <div class="card border border-dark" style="--bs-card-border-radius: 0; --bs-card-inner-border-radius: 0;">
+                            <figure class="card-img-top m-0 overflow-hidden bsb-overlay-hover">
+                                <a href="#">
+                                    <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="${item.image}" alt="${item.title}">
+                                </a>
+                                <figcaption>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-eye text-white bsb-hover-fadeInLeft" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <h4 class="h6 text-white bsb-hover-fadeInRight mt-2">Ver más</h4>
+                                </figcaption>
+                            </figure>
+                            <div class="article-body card-body border-0 p-4">
+                                <div class="entry-header mb-3">
+                                    <h2 class="card-title entry-title h4 mb-0">
+                                        <a class="link-dark link-opacity-100 link-opacity-75-hover text-decoration-none" href="#">${item.title}</a>
+                                    </h2>
+                                </div>
+                                <p class="card-text entry-summar m-0 p-0">
+                                    ${item.description}
+                                </p>
+                                <p class="card-text fw-bold">$${item.price.toFixed(2)}</p>
+                                <button class="btn btn-dark" onclick="addToCart('${item.title}', ${item.price}, '${item.image}', '${item.title}')">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </article>
+                `;
+                shopProductsContainer.appendChild(itemCard);
+            });
+        }
+    
+        // Llamar a la función para obtener productos
+        fetchProducts();
+});

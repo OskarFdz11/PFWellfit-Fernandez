@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const shopProductsContainer = document.querySelector("#shop-items");
 
     // Función para generar las tarjetas de los productos
-    function renderShopItems() {
+    function renderShopItems(products) {
         products.forEach(item => {
             const itemCard = document.createElement("div");
             itemCard.className = "col-12 col-md-6 col-lg-4 d-flex";

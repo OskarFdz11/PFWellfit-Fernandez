@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     const cartContainer = document.querySelector(".sidecart");
-    const cartItemsContainer = document.getElementById("cart-items");
-    const cartTotalElement = document.getElementById("cart-total");
+    const cartItemsContainer = document.querySelector("#cart-items");
+    const cartTotalElement = document.querySelector("#cart-total");
     const toggleCartButton = document.querySelector(".toggle-cart-btn");
     const closeCartButton = document.querySelector(".close-cart-btn");
     const finalizeCartButton = document.querySelector('#finalize-cart');
@@ -67,14 +67,18 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("cart", JSON.stringify(cart));
     };
 
-    // Mostrar sweet alert de confirmación de pedido al hacer clic en el botón de finalizar, si no tiene ninguno, mostrará una alerta de error
+    // Botón para redigir a la página de checkout, si no tiene ningún producto, mostrará una alerta de error
 
     finalizeCartButton.addEventListener("click", () => {
 
         cart = JSON.parse(localStorage.getItem("cart")) || [];
         console.log("Updated Cart Length:", cart.length);
 
-        if (cart.length === 0) {
+        if (cart.length > 0) {
+
+            window.location.href = "checkout.html";
+
+        } else {
 
             Swal.fire({
                 position: "center",
@@ -83,16 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 showConfirmButton: false,
                 timer: 1500
             });
-
-        } else {
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "¡Su pedido se ha confirmado exitosamente!",
-                showConfirmButton: false,
-                timer: 1500
-            });
-
         };
     });
           
