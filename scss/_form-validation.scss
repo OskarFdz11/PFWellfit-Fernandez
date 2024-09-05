@@ -1,0 +1,39 @@
+$container-max-width: 960px;
+$bd-placeholder-font-size: 1.125rem;
+$bd-placeholder-lg-font-size: 3.5rem;
+
+.container {
+  max-width: $container-max-width;
+  box-sizing: border-box;
+}
+
+.bd-placeholder-img {
+  font-size: $bd-placeholder-font-size;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: $bd-placeholder-lg-font-size;
+  }
+}
+
+.color-change {
+    color: $color-secondary;
+}
+
+input.form-control::placeholder {
+    color: rgba(236, 229, 209, 0.8);
+}
+
+.form-select {
+    color: $color-secondary;
+    background-color: $color-primary;
+}
+
+.badge2 {
+    background-color: $color-primary;
+}

@@ -1,52 +1,50 @@
 // Script funciones de checkout
 
-document.addEventListener("DOMContentLoaded", () => {
-    const checkoutItemsContainer = document.querySelector("#checkout-items");
-    const checkoutTotalElement = document.querySelector("#checkout-total span");
-    const completePurchaseButton = document.querySelector("#complete-purchase");
-
+document.addEventListener('DOMContentLoaded', function () {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let total = 0;
+    const cartSummary = document.getElementById("cart-summary");
 
-    cart.forEach(item => {
-        total += item.price * item.quantity;
+    function renderCartSummary() {
+        cartSummary.innerHTML = '';  // Limpiar el contenido previo
+        let total = 0;
 
-        const itemElement = document.createElement("div");
-        itemElement.className = "checkout-item";
-        itemElement.innerHTML = `
-            <span>${item.quantity}x ${item.title}</span>
-            <span>$${(item.price * item.quantity).toFixed(2)}</span>
+        cart.forEach(item => {
+            const listItem = document.createElement("li");
+            listItem.classList.add("list-group-item", "d-flex", "justify-content-between", "lh-sm");
+            listItem.innerHTML = `
+                <div>
+                    <h6 class="my-0">${item.title}</h6>
+                    <small class="text-muted">${item.description}</small>
+                </div>
+                <span class="text-muted">$${(item.price * item.quantity).toFixed(2)}</span>
+            `;
+            cartSummary.appendChild(listItem);
+            total += item.price * item.quantity;
+        });
+
+        const totalItem = document.createElement("li");
+        totalItem.classList.add("list-group-item", "d-flex", "justify-content-between");
+        totalItem.innerHTML = `
+            <span>Total (USD)</span>
+            <strong>$${total.toFixed(2)}</strong>
         `;
-        checkoutItemsContainer.appendChild(itemElement);
-    });
+        cartSummary.appendChild(totalItem);
+    }
 
-    checkoutTotalElement.textContent = total.toFixed(2);
+    // Renderizar carrito al cargar la página
+    renderCartSummary();
 
-    completePurchaseButton.addEventListener("click", () => {
-        fetch('https://jsonplaceholder.typicode.com/posts', {
-            method: 'POST',
-            body: JSON.stringify({
-                cart: cart,
-                total: total,
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Compra enviada:', data);
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "¡Compra realizada con éxito!",
-                showConfirmButton: true,
-            }).then(() => {
-                localStorage.removeItem("cart");
-                window.location.href = "index.html";
-            });
-        })
-        .catch(error => console.error('Error:', error));
+    // Mostrar alerta al finalizar compra
+    const checkoutForm = document.getElementById("checkout-form");
+    checkoutForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Compra realizada exitosamente!",
+            showConfirmButton: true
+        });
+        localStorage.removeItem("cart"); // Limpia el carrito después de la compra
     });
-    
 });
+

@@ -126,7 +126,7 @@
                             <a href="./tech.html">TECH</a>
                         </li>
                         <li class="header__navbar-item">
-                            <a href="#">TIENDA</a>
+                            <a href="./tienda.html">TIENDA</a>
                         </li>
                         <li class="header__navbar-item">
                             <a href="./contacto.html">CONTACTO</a>
@@ -141,31 +141,23 @@
 
     <!--Contenido principal-->
     <main>
-
-        <!--targetas de los productos con bootstrap-->
-        <section class="py-1 py-md-5">
-            <div class="container">
-                <div class="row justify-content-md-center">
-                    <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                        <h2 class="category-title mb-4 display-5 text-center">Catálogo de Productos</h2>
-                        <p class="category-description mb-5 text-center lead fs-4">Explora nuestra selección de
-                            productos diseñados para potenciar tu rendimiento y bienestar, desde ropa deportiva hasta
-                            accesorios esenciales para tus entrenamientos.</p>
-                        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
-                    </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img id="product-image" class="img-fluid" alt="Product Image">
+                </div>
+                <div class="col-md-6 color-change">
+                    <h1 id="product-title" class="h2"></h1>
+                    <p id="product-price" class="fw-bold"></p>
+                    <p id="product-description"></p>
+                    <button id="add-to-cart-btn" class="btn">Agregar al carrito</button>
                 </div>
             </div>
-
-            <div class="container overflow-hidden mt-5">
-                <div class="row gy-4 gy-xxl-5" id="shop-items">
-                    <!-- Las tarjetas de blog se generaran dinámicamente aquí -->
-                </div>
-            </div>
-        </section>
+        </div>
 
         <!-- Botón para mostrar/ocultar el carrito -->
         <button class="btn toggle-cart-btn">Carrito</button>
-
+        
         <!-- Carrito lateral -->
         <div class="sidecart">
             <button class="close-cart-btn">&times;</button>
@@ -252,6 +244,10 @@
     <!--script de la función del carrito-->
 
     <script src="../js/cart.js"></script>
+
+    <!--Script de la función del producto-->
+
+    <script src="../js/product.js"></script>
 
 </body>
 

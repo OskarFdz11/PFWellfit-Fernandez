@@ -674,4 +674,39 @@ footer {
   cursor: pointer;
 }
 
+.container {
+  max-width: 960px;
+  box-sizing: border-box;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+.color-change {
+  color: #ECE5D1;
+}
+
+input.form-control::placeholder {
+  color: rgba(236, 229, 209, 0.8);
+}
+
+.form-select {
+  color: #ECE5D1;
+  background-color: #333831;
+}
+
+.badge2 {
+  background-color: #333831;
+}
+
 /*# sourceMappingURL=styles.css.map */
