@@ -1,5 +1,3 @@
-// Script cart
-
 document.addEventListener("DOMContentLoaded", function () {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -40,16 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         saveCart();
         renderCart();
-
-        // Mostrar Toastify
-        Toastify({
-            text: "Producto agregado exitosamente al carrito",
-            duration: 3000,
-            close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "right", // `left`, `center` or `right`
-            backgroundColor: "#4CAF50", // Color verde de éxito
-        }).showToast();
     };
 
     // Función para eliminar producto del carrito
@@ -59,16 +47,21 @@ document.addEventListener("DOMContentLoaded", function () {
         renderCart();
     };
 
-    // Función para actualizar la cantidad de un producto
+    // Función para actualizar la cantidad de productos en el carrito
     window.updateQuantity = function (title, quantity) {
         const item = cart.find(item => item.title === title);
         if (item) {
             item.quantity += quantity;
             if (item.quantity <= 0) {
-                removeFromCart(title);
+                // Si la cantidad es 0 o menor, eliminar el producto del carrito
+                cart = cart.filter(i => i.title !== title);
             }
         }
+
+        // Guardar el carrito actualizado en localStorage
         saveCart();
+
+        // Renderizar el resumen del carrito nuevamente
         renderCart();
     };
 
@@ -77,19 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("cart", JSON.stringify(cart));
     };
 
-    // Botón para redigir a la página de checkout, si no tiene ningún producto, mostrará una alerta de error
-
+    // Botón para redirigir a la página de checkout, si no tiene ningún producto, mostrará una alerta de error
     finalizeCartButton.addEventListener("click", () => {
-
-        cart = JSON.parse(localStorage.getItem("cart")) || [];
-        console.log("Updated Cart Length:", cart.length);
-
+        cart = JSON.parse(localStorage.getItem("cart")) || [];  // Volver a obtener el carrito actualizado
         if (cart.length > 0) {
-
             window.location.href = "checkout.html";
-
         } else {
-
             Swal.fire({
                 position: "center",
                 icon: "error",
@@ -97,9 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 showConfirmButton: false,
                 timer: 1500
             });
-        };
+        }
     });
-          
 
     // Renderizar el carrito
     function renderCart() {
@@ -124,7 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
             `;
-
             cartItemsContainer.appendChild(cartItem);
         });
 

@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             const response = await fetch('https://fakestoreapi.com/products');
             const products = await response.json();
+            console.log(products);
             renderShopItems(products);
         } catch (error) {
             console.error('Error fetching products:', error);
@@ -22,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
             itemCard.className = "col-12 col-md-6 col-lg-4 d-flex";
     
             itemCard.innerHTML = `
-                <article class="d-flex">
-                    <div class="card border border-dark" style="--bs-card-border-radius: 0; --bs-card-inner-border-radius: 0;">
+                <article class="d-flex card-container">
+                    <div class="card card1 border border-dark" style="--bs-card-border-radius: 0; --bs-card-inner-border-radius: 0;">
                         <figure class="card-img-top m-0 overflow-hidden bsb-overlay-hover">
                             <a href="product.html?id=${item.id}"> <!-- Redirige a product.html con el ID del producto -->
                                 <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="${item.image}" alt="${item.title}">
@@ -42,10 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <a class="link-dark link-opacity-100 link-opacity-75-hover text-decoration-none" href="product.html?id=${item.id}">${item.title}</a>
                                 </h2>
                             </div>
-                            <p class="card-text entry-summar m-0 p-0">
+                            <p class="card-text descripcion entry-summar m-0 p-0">
                                 ${item.description}
                             </p>
-                            <p class="card-text fw-bold">$${item.price.toFixed(2)}</p>
+                            <p class="card-text fw-bold price">$${item.price.toFixed(2)}</p>
                             <button class="btn btn-dark" onclick="addToCart('${item.title}', ${item.price}, '${item.image}', '${item.title}')">Agregar al carrito</button>
                         </div>
                     </div>
