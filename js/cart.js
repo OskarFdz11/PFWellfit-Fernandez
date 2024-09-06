@@ -38,6 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         saveCart();
         renderCart();
+
+        // Mostrar Toastify
+        Toastify({
+            text: "Producto agregado exitosamente al carrito",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            backgroundColor: "#4CAF50", // Color verde de éxito
+        }).showToast();
     };
 
     // Función para eliminar producto del carrito
