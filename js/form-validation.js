@@ -52,6 +52,9 @@
         position: 'center',
         icon: 'success',
         title: 'Compra realizada exitosamente!',
+        background: '#1e1e1e',
+        color: '#fff', 
+        confirmButtonColor: '#3085d6',
         showConfirmButton: true
       }).then(() => {
         localStorage.clear(); // Limpiar el carrito después de la compra

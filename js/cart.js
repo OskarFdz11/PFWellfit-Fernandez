@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Función para agregar producto al carrito
     window.addToCart = function (title, price, image) {
+        console.log('Producto agregado:', { title, price, image });
         const item = cart.find(item => item.title === title);
         if (item) {
             item.quantity++;
@@ -44,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
             text: "Producto agregado exitosamente al carrito",
             duration: 3000,
             close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "right", // `left`, `center` or `right`
-            backgroundColor: "#4CAF50", // Color verde de éxito
+            gravity: "top",
+            position: "right", 
+            backgroundColor: "#4CAF50", 
         }).showToast();
     };
 
@@ -60,13 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Función para actualizar la cantidad de productos en el carrito
     window.updateQuantity = function (title, quantity) {
         const item = cart.find(item => item.title === title);
-        if (item) {
-            item.quantity += quantity;
-            if (item.quantity <= 0) {
-                // Si la cantidad es 0 o menor, eliminar el producto del carrito
-                cart = cart.filter(i => i.title !== title);
-            }
-        }
+        //Operador ternario
+        item ? (item.quantity += quantity, item.quantity <= 0 ? cart = cart.filter(i => i.title !== title) : null) : null;
+
 
         // Guardar el carrito actualizado en localStorage
         saveCart();
@@ -96,6 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Función para escapar comillas en los títulos de los productos
+    function escapeQuotes(str) {
+        return str.replace(/'/g, "\\'").replace(/"/g, '\\"');
+    };
+
+
     // Renderizar el carrito
     function renderCart() {
         cartItemsContainer.innerHTML = '';
@@ -109,12 +112,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="cart-item">
                     <img src="${item.image}" alt="${item.alt}">
                     <div class="details">
-                        <h4>${item.title}</h4>
+                        <h4>${escapeQuotes(item.title)}</h4>
                         <p>$${item.price.toFixed(2)}</p>
                         <div class="quantity">
-                            <button onclick="updateQuantity('${item.title}', 1)">+</button>
+                            <button onclick="updateQuantity('${escapeQuotes(item.title)}', 1)">+</button>
                             <span>${item.quantity}</span>
-                            <button onclick="updateQuantity('${item.title}', -1)">-</button>
+                            <button onclick="updateQuantity('${escapeQuotes(item.title)}', -1)">-</button>
                         </div>
                     </div>
                 </div>

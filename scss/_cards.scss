@@ -1,102 +1,11 @@
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; // Espacio entre las tarjetas
-  
-    .card {
-      flex: 1 1 calc(33.333% - 20px); // Tres tarjetas por fila con un gap de 20px
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-  
-      figure {
-        margin: 0;
-        height: 300px; // Altura fija para todas las imágenes
-        overflow: hidden; // Ocultar el desbordamiento de imágenes
-        position: relative;
-  
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; // Asegura que la imagen cubra todo el espacio sin distorsionarse
-          transition: transform 0.3s ease-in-out;
-        }
-  
-        // Hover effect
-        &:hover img {
-          transform: scale(1.05); // Aumentar ligeramente la imagen al hacer hover
-        }
-  
-        figcaption {
-          position: absolute;
-          bottom: 10px;
-          left: 10px;
-          color: white;
-          display: none; // Se mostrará solo al hacer hover
-  
-          svg {
-            margin-bottom: 5px;
-          }
-  
-          h4 {
-            font-size: 14px;
-            margin: 0;
-          }
-        }
-  
-        &:hover figcaption {
-          display: block; // Mostrar al hacer hover
-        }
-      }
-  
-      .card-body {
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-  
-        .card-title {
-          font-size: 16px;
-          margin-bottom: 10px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis; // Asegura que los títulos largos se recorten con "..."
-        }
-  
-        .descripcion {
-          font-size: 14px;
-          color: #666;
-          line-height: 1.5;
-          max-height: 45px; // Limita la altura máxima de la descripción
-          overflow: hidden;
-          text-overflow: ellipsis; // Recorta la descripción larga con "..."
-        }
-  
-        .price {
-          font-size: 16px;
-          font-weight: bold;
-          color: #333;
-          margin-bottom: 10px;
-        }
-  
-        .btn {
-          background-color: #333;
-          color: #fff;
-          padding: 10px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-  
-          &:hover {
-            background-color: #444;
-          }
-        }
-      }
-    }
+.card {
+  border-radius: 10px;
+
+  img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+
   }
-  
+}

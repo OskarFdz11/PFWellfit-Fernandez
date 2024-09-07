@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Función para escapar comillas en los títulos de los productos
+    function escapeQuotes(str) {
+        return str.replace(/'/g, "\\'").replace(/"/g, '\\"');
+    }
+
+
     // Función para generar las tarjetas de los productos
     function renderShopItems(products) {
         shopProductsContainer.innerHTML = ''; // Limpiar contenedor
@@ -24,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
             itemCard.innerHTML = `
                 <article class="d-flex card-container">
-                    <div class="card card1 border border-dark" style="--bs-card-border-radius: 0; --bs-card-inner-border-radius: 0;">
+                    <div class="card border border-dark" style="--bs-card-border-radius: 0; --bs-card-inner-border-radius: 0;">
                         <figure class="card-img-top m-0 overflow-hidden bsb-overlay-hover">
                             <a href="product.html?id=${item.id}"> <!-- Redirige a product.html con el ID del producto -->
                                 <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="${item.image}" alt="${item.title}">
@@ -40,14 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="article-body card-body border-0 p-4">
                             <div class="entry-header mb-3">
                                 <h2 class="card-title entry-title h4 mb-0">
-                                    <a class="link-dark link-opacity-100 link-opacity-75-hover text-decoration-none" href="product.html?id=${item.id}">${item.title}</a>
+                                    <a class="link-dark link-opacity-100 link-opacity-75-hover text-decoration-none link-title" href="product.html?id=${item.id}">${item.title}</a>
                                 </h2>
                             </div>
                             <p class="card-text descripcion entry-summar m-0 p-0">
-                                ${item.description}
+                                ${escapeQuotes(item.description)}
                             </p>
                             <p class="card-text fw-bold price">$${item.price.toFixed(2)}</p>
-                            <button class="btn btn-dark" onclick="addToCart('${item.title}', ${item.price}, '${item.image}', '${item.title}')">Agregar al carrito</button>
+                            <button class="btn btn-dark" onclick="addToCart('${escapeQuotes(item.title)}', ${item.price}, '${item.image}')">Agregar al carrito</button>
                         </div>
                     </div>
                 </article>

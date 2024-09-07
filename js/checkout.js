@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let total = 0;
         let totalQuantity = 0;
 
+
         cart.forEach(item => {
             const listItem = document.createElement("li");
             listItem.classList.add("list-group-item", "d-flex", "justify-content-between", "lh-sm");
@@ -22,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
-                    <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity('${item.title}', -1)">-</button>
+                    <button class="btn btn-sm btn-outline-secondary decrease-btn">-</button>
                     <span class="mx-2">${item.quantity}</span>
-                    <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity('${item.title}', 1)">+</button>
+                    <button class="btn btn-sm btn-outline-secondary increase-btn">+</button>
                     <span class="text-muted ml-3">$${(item.price * item.quantity).toFixed(2)}</span>
                 </div>
             `;
@@ -32,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             total += item.price * item.quantity;
             totalQuantity += item.quantity;
+
+            // Asigna los eventos para aumentar/disminuir cantidades
+            listItem.querySelector(".decrease-btn").addEventListener("click", () => updateQuantity(item.title, -1));
+            listItem.querySelector(".increase-btn").addEventListener("click", () => updateQuantity(item.title, 1));
         });
 
         const totalItem = document.createElement("li");
