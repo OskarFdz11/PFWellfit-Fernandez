@@ -1,6 +1,6 @@
 # The Wellfit Society - Proyecto con Carrito de Compras
 
-**The Wellfit Society** es un blog de fitness, originalmente desarrollado como parte de un curso de Desarrollo Web. Este proyecto ha sido ampliado con nuevas funcionalidades de ecommerce, utilizando tecnologías modernas para manejar la interacción del usuario con los productos y el carrito de compras.
+**The Wellfit Society** es un blog de fitness, originalmente desarrollado como parte de un curso de Desarrollo Web. Este proyecto ha sido ampliado con nuevas funcionalidades de ecommerce, utilizando tecnologías avanzadas para manejar la interacción del usuario con los productos y el carrito de compras.
 
 ## Funcionalidades Agregadas
 
